@@ -9,6 +9,10 @@ Mini style guide:
 
 These Terms of Service set forth the terms between you ("**Customer**," "**you**," or "**your**") and Elastisys AB, org. no. 556873-6135, a company incorporated under the laws of Sweden, ("**Elastisys**," "**we**", or "**us**") and governs your access to and use of the Services, as defined below.
 
+These terms are applicable starting 2022-12-01.
+Please find previous versions of the ToS at the following link:
+[https://github.com/elastisys/terms/commits/main/terms-of-service.md](https://github.com/elastisys/terms/commits/main/terms-of-service.md)
+
 [TOC]
 
 ## 1. Definitions
@@ -61,6 +65,8 @@ For the avoidance of doubt, Elastisys IP does not include Data owned by the Cust
 
 **PLAN** means the combined uptime and support undertaking provided by Elastisys for one or more Environments as reflected in the Order.
 A Plan can either be a Premium Plan or a Standard Plan.
+
+**PREVIEW FEATURE** is a feature which is explicitly sold and marketed as "preview".
 
 **PROCESSOR** means natural or legal person, public authority, agency, or other body which Processes Personal Data on behalf of the Controller.
 
@@ -393,6 +399,17 @@ If this Agreement has not been in force during an entire calendar year, the abov
 
 The limitations of liability set forth herein shall not apply to any liability arising from intent or gross negligence.
 
+### 9.1 Preview Features
+
+Upon request, Elastisys may offer Customers access to Preview Features.
+Preview Features are assessed to have a higher residual risk than commonly accepted by Customers. Preview Features are covered by DPAs, but not SLAs (Section 3).
+Residual risks include, but are not limited to:
+(a) risk of downtime,
+(b) risk of the feature becoming unavailable in the future,
+(c) risk of data loss.
+The risks are usually due to novelty of the feature or uncertainties in the open-source ecosystem.
+By using Preview Features, the Customer accepts these additional risks.
+
 ## 10. Confidential Information
 
 From time to time during the Term and for a period of five years after the Term has ended, Elastisys and Customer may not disclose or make available to third parties the other party's business affairs, products, confidential intellectual property, trade secrets, third-party confidential information, and other sensitive or proprietary information, whether orally or in written, electronic, or other form or media/in written or electronic form or media, whether or not marked, designated, or otherwise identified as "confidential" at the time of disclosure (collectively, "**Confidential Information**").
@@ -496,7 +513,7 @@ You will be notified of modifications through notifications or posts on Elastisy
 You are responsible for reviewing and becoming familiar with any such modifications.
 Your continued use of the Services after the effective date of the modifications will be deemed acceptance of the modified terms.
 Elastisys will provide at least 30 days' advance notice of changes to any service level that Elastisys reasonably anticipates may result in a material reduction in quality or services.
-If the Customer chooses not to accept the modification, Customer has the right to terminate the Agreement within 14 days from Elastisys notification of the modification.
+If the Customer chooses not to accept the modification, Customer has the right to terminate the Agreement within 30 days from Elastisys notification of the modification.
 
 ## 20. Governing Law and Dispute
 
@@ -659,10 +676,11 @@ Standard retention time:
 - [Application logs](https://elastisys.com/compliant-kubernetes-application-logs/) are stored for a time period of 30 days.
 - [Audit logs](https://elastisys.com/compliant-kubernetes-audit-logs/) are stored for a time period of 30 days.
 - [Metrics](https://elastisys.com/compliant-kubernetes-metrics/) are stored for a time period of 90 days.
+    Downsampled metrics may be stored for longer time periods for capacity management purposes.
 
 The retention period for application, audit logs, and metrics can be modified after discussion with the customer.
-Upon request, Elastisys can set up long-term cold storage for both application and audit logs, including off-site
-replication.
+Upon request, Elastisys can help the Customer set up long-term cold storage for both application and audit logs, including off-site replication, as described at:
+[https://elastisys.io/compliantkubernetes/user-guide/long-term-log-retention/](https://elastisys.io/compliantkubernetes/user-guide/long-term-log-retention/)
 
 ## A2.3 Safeguards
 
@@ -1180,6 +1198,7 @@ Elastisys can manage the following additional services within an environment:
 -   Databases: PostgreSQL versions 12, 13, or 14.
 -   Low-latency in-memory caches: Ephemeral Redis version 6
 -   Message queues: RabbitMQ version 3
+-   Time-series database: TimescaleDB Community (only open-source features are included)
 
 For a complete and up-to-date description of the additional services, see the public documentation at
 [https://elastisys.io/compliantkubernetes/user-guide/additional-services/](https://elastisys.io/compliantkubernetes/user-guide/additional-services/)
@@ -1204,6 +1223,10 @@ Retention times of additional services are the same as the Compliant Kubernetes 
 Out-of-cluster Authorized User access is performed via OpenID and RBACs, covered by audit logs (included in Compliant Kubernetes). In addition, NetworkPolicies can be used to control access to Additional Services from selected microservices of the Customer Application.
 
 For PostgreSQL and RabbitMQ, the Customer is given user access with privileges to delegate access to other Authorized Users and Customer Applications, as required. For Redis, access is controlled via NetworkPolicies only, i.e., no usernames and passwords.
+
+## A3.3b Application access
+
+By default, additional managed services are only accessible for applications running within the respective Kubernetes environment. Customer can request out-of-cluster access if Customer accepts the added security risks.
 
 ## A3.4 Backup and disaster recovery
 
