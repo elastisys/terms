@@ -9,7 +9,7 @@ Mini style guide:
 
 These Terms of Service set forth the terms between you ("**Customer**," "**you**," or "**your**") and Elastisys AB, org. no. 556873-6135, a company incorporated under the laws of Sweden, ("**Elastisys**," "**we**", or "**us**") and governs your access to and use of the Services, as defined below.
 
-These terms are applicable starting 2022-12-01.
+These terms are applicable starting 2022-02-13.
 Please find previous versions of the ToS at the following link:
 [https://github.com/elastisys/terms/commits/main/terms-of-service.md](https://github.com/elastisys/terms/commits/main/terms-of-service.md)
 
@@ -32,6 +32,10 @@ The following terms and expressions shall in this document, when capitalized, ha
 **CUSTOMER** means the legal entity that has entered into the Agreement with Elastisys.
 
 **CUSTOMER APPLICATIONS** refers to all of the Customer's application(s) which, from time to time, are deployed using the Services.
+
+**CUSTOMER DATA** refers to all Data processed by the Customer Application inside an Environment.
+Examples include database definitions, data in databases, container images, messages in message queues, files on PersistentVolumeClaims.
+Platform-related Data, including alerts, platform audit logs, platform metrics are not Customer Data.
 
 **DATA** means all the information, text drawings, diagrams, images or sounds (including and/or together with any databases made up of any of these) and other data which are embodied in any electronic, magnetic, optical or tangible media, and which:
 
@@ -567,7 +571,7 @@ The Sub-processor shall further ensure that Personal Data is protected against u
 - that the authorized employees process the Personal Data only in accordance with this DPA and the Processor's instructions and
 - that each authorized employee is bound by a confidentiality undertaking towards the Processor in relation to the Personal Data.
 
-**A1.3.3** The Sub-processor shall notify the Processor without undue delay after becoming aware of a personal data breach.
+**A1.3.3** The Sub-processor shall notify the Processor without undue delay and in no case later than 24 hours after becoming aware of a personal data breach.
 Such notification shall, where possible, at least contain the information described in Article 33.3 of the GDPR.
 
 ## A1.4 The sub-processor's obligations to assist
@@ -1657,3 +1661,88 @@ Responsibility assignment matrix; Responsible, Accountable, Consulted, Informed 
 </tr>
 </tbody>
 </table>
+
+# Appendix 4 Privacy Policy for Authorized Users
+
+## A4.1 Introduction
+
+Elastisys prides itself with being a data protection and privacy front-runner.
+Therefore, we take the privacy of Authorized Users seriously.
+As part of our service, we process personal data of Authorized Users for change management and auditing purposes, in accordance with GDPR, Swedish Patient Data, and other applicable laws and regulations.
+
+Note that, this privacy policy **only** applies to Authorized Users.
+Customer Data is processed according to Appendix 1 Data Protection Agreement.
+
+## A4.2 Purpose
+
+We collect personal data of Authorized uses for the following purposes:
+
+* managing access to Services;
+* executing Change Orders and complying with our change management policy;
+* keeping an audit log.
+
+## A4.3 Personal Data We Process
+
+The personal data we process includes contact information, such as IP addresses, first name, last name, business email, and business phone.
+
+## A4.4 Legal Basis
+
+We process personal data of Authorized Users based on legal obligation.
+
+Specifically, the most stringent requirement comes from the Swedish Patient Data Law (HSLF-FS 2016:40 4 kap. 9 §), which stipulates that we store an audit log for at least 5 years.
+We understand GDPR Art. 32 "Security of Processing" to imply that the privacy of Authorized Users needs to be balanced against the privacy of Customer Application users.
+We need to store Change Orders for complying with Swedish Accounting Laws (Bokföringslag 1999:1078).
+
+## A4.5 Retention
+
+By default, audit logs are stored the personal data of Authorized Users for at least 30 days.
+
+If you process patient data, then we legally need to store audit logs for at least 5 years, according to Swedish Patient Data Law (HSLF-FS 2016:40 4 kap. 9 §).
+
+Change Orders are stored for the maximum of the following:
+- as long as we have a business relationship;
+- (if you process patient data) for at least 5 years;
+- as required to comply with Swedish Accounting Laws (Bokföringslag 1999:1078).
+
+## A4.6 Protection of personal data
+
+We protect personal data of Authorized Users as following:
+
+* Encryption: Personal data is encrypted-at-rest and in-transit.
+* Data minimization: We only process necessary personal data of Authorized Users.
+* Access minimization: Access to personal data of Authorized Users is only permitted to Elastisys employees needing it.
+
+## A4.7 Rights of Authorized Users
+
+Authorized Users have the right to:
+
+* access their personal data;
+* request rectification or erasure of their personal data;
+* object to the processing of their personal data; and to
+* withdraw their consent to the processing of their personal data at any time.
+
+## A4.8 Processors and Third Countries
+
+We use the following Processors for processing personal data of Authorized Users:
+
+* Atlassian (JIRA)
+* Google (Drive and GMail)
+
+Some of these Processors are headquartered in the US.
+
+According to our experience, these services are ubiquitously used and appreciated by Authorized Users.
+Therefore, we assessed that their usage does not add risk to the privacy of Authorized Users.
+
+## A4.9 Contact information
+
+If you have any questions or concerns about our privacy policy, please contact us at [dpo@elastisys.com](mailto:dpo@elastisys.com).
+
+## A4.10 IT Systems Outside the Scope of this Privacy Policy
+
+As part of our Service, Authorized Users may choose to communicate with Elastisys over a shared Slack channel.
+Within the scope of that communication, the [Slack Privacy Policy](https://slack.com/trust/privacy/privacy-policy) applies.
+
+Elastisys uses a self-hosted Yopass instance to secure share secrets.
+IP addresses are only processed as much as technically required.
+We do not retain personal data in Yopass.
+We advise customers to access Yopass from their corporate network, so their IP addresses do not constitude personal data.
