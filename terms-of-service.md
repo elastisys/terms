@@ -9,7 +9,7 @@ Mini style guide:
 
 These Terms of Service set forth the terms between you ("**Customer**," "**you**," or "**your**") and Elastisys AB, org. no. 556873-6135, a company incorporated under the laws of Sweden, ("**Elastisys**," "**we**", or "**us**") and governs your access to and use of the Services, as defined below.
 
-These terms are applicable starting 2022-02-13.
+These terms are applicable starting 2023-05-11.
 Please find previous versions of the ToS at the following link:
 [https://github.com/elastisys/terms/commits/main/terms-of-service.md](https://github.com/elastisys/terms/commits/main/terms-of-service.md)
 
@@ -34,7 +34,7 @@ The following terms and expressions shall in this document, when capitalized, ha
 **CUSTOMER APPLICATIONS** refers to all of the Customer's application(s) which, from time to time, are deployed using the Services.
 
 **CUSTOMER DATA** refers to all Data processed by the Customer Application inside an Environment.
-Examples include database definitions, data in databases, container images, messages in message queues, files on PersistentVolumeClaims.
+Examples include database definitions, data in databases, container images, messages in message queues, files on PersistentVolumeClaims, application logs.
 Platform-related Data, including alerts, platform audit logs, platform metrics are not Customer Data.
 
 **DATA** means all the information, text drawings, diagrams, images or sounds (including and/or together with any databases made up of any of these) and other data which are embodied in any electronic, magnetic, optical or tangible media, and which:
@@ -197,13 +197,13 @@ When submitting a Change Order, the Customer agrees and acknowledges that Custom
 <tr>
     <th>&nbsp;</th>
     <th>&nbsp;</th>
-    <th colspan="2">Premium Plan**</th>
+    <th colspan="2">Premium Plan***</th>
     <th colspan="2">
         Standard Plan
         <br>
         (Incident management:
         <br>
-        6am to 22pm CET
+        6am to 22pm CET)
     </th>
 </tr>
 <tr>
@@ -268,7 +268,7 @@ When submitting a Change Order, the Customer agrees and acknowledges that Custom
 
 \* Response time from a qualified engineer measured from incident start or notification by the Customer
 
-\*\* Environments with the Standard Plan response and solutions times only applies during office hours (8 am to 5 pm CET)
+\*\* Response time and target solutions times only applies between 06am and 22pm CET for Standard plan Environments.
 
 \*\*\* Environments with the Premium Plan are required to go through the go-live checklist ([https://elastisys.io/compliantkubernetes/user-guide/go-live/](https://elastisys.io/compliantkubernetes/user-guide/go-live/)) before any uptime service levels are enforced.
 
@@ -697,6 +697,26 @@ The up-to-date list of safeguards, see the public documentation at
 
 Should the Customer require more permissions, this will be granted only after Elastisys determined that such a request does not pose a risk to the security and stability of the platform. For an up-to-date process on how such risk is evaluated, see the public documentation at
 [https://elastisys.io/compliantkubernetes/user-guide/demarcation/](https://elastisys.io/compliantkubernetes/user-guide/demarcation/)
+
+## A2.3.1 IP Allowlisting
+
+IP allowlisting -- also called network-based access control -- adds an additional layer of security by only allowing access from a trusted set of IP addresses.
+Elastisys strongly recommends it as a complement to identity-based access control.
+
+As a bare minimum, the Customer should configure IP allowlisting on Compliant Kubernetes Service Access Points, such as the Kubernetes API.
+The Customer can easily request such IP allowlisting by filing a service ticket.
+
+The Customer can configure IP allowlisting on applications hosted inside a Compliant Kubernetes environment by following the public documentation at [https://elastisys.io/compliantkubernetes/user-guide/network-model/](https://elastisys.io/compliantkubernetes/user-guide/network-model/).
+
+Upon request, Elastisys can support the customer in configuring IP allowlisting for external IT systems.
+Said external IT systems run outside Compliant Kubernetes, but need to be accessed by Customer Applications running inside Compliant Kubernetes.
+The implementation may include manual approaches, such as careful coordination via email, or automated approaches.
+The Customer and Elastisys jointly decide on the exact implementation, taking into account the following decision drivers:
+
+* Elastisys wants to minimize added risk to the Environment stability and security;
+* Elastisys wants to reduce the human overhead to supporting the Customer with IP allowlisting;
+* Customer wants to reduce the number of IP addresses trusted by the external IT system;
+* Customer wants to reduce the human overhead in (re)configuring IP allowlisting.
 
 ## A2.4 Backup and disaster recovery
 
@@ -1199,7 +1219,7 @@ Responsibility assignment matrix; Responsible, Accountable, Consulted, Informed 
 
 Elastisys can manage the following additional services within an environment:
 
--   Databases: PostgreSQL versions 12, 13, or 14.
+-   Databases: PostgreSQL versions 13 or 14.
 -   Low-latency in-memory caches: Ephemeral Redis version 6
 -   Message queues: RabbitMQ version 3
 -   Time-series database: TimescaleDB Community (only open-source features are included)
@@ -1708,7 +1728,7 @@ Change Orders are stored for the maximum of the following:
 
 We protect personal data of Authorized Users as following:
 
-* Encryption: Personal data is encrypted-at-rest and in-transit.
+* Encryption: Personal data is encrypted in-transit. If supported by the underlying subprocessor, personal data is also encrypted at-rest.
 * Data minimization: We only process necessary personal data of Authorized Users.
 * Access minimization: Access to personal data of Authorized Users is only permitted to Elastisys employees needing it.
 
@@ -1718,17 +1738,23 @@ Authorized Users have the right to:
 
 * access their personal data;
 * request rectification or erasure of their personal data;
-* object to the processing of their personal data; and to
-* withdraw their consent to the processing of their personal data at any time.
+* object to the processing of their personal data;
+* withdraw their consent to the processing of their personal data at any time;
+* file a complaint with the [Swedish Authority for Privacy Protection (IMY)](https://imy.se).
 
 ## A4.8 Processors and Third Countries
 
 We use the following Processors for processing personal data of Authorized Users:
 
-* Atlassian (JIRA)
-* Google (Drive and GMail)
+Name of Subprocessor | Description of Processing | Location of Processing | Corporate Location | DPA
+---------------------|---------------------------|------------------------|--------------------|----
+Atlassian (JIRA) | service ticket handling | Global | Australia | [DPA](https://www.atlassian.com/legal/data-processing-addendum)
+Google Workspace (GMail, Drive) | Email communication, storing contact information | Global | US | [DPA](https://cloud.google.com/terms/data-processing-addendum)
 
-Some of these Processors are headquartered in the US.
+As of 2023-02-03, both Australia and the US are third countries.
+See what this means on IMY's website:
+[EN](https://www.imy.se/en/organisations/data-protection/this-applies-accordning-to-gdpr/transfer-of-data-to-a-third-country/)
+[SE](https://www.imy.se/vanliga-fragor-och-svar/hur-vet-vi-om-ett-tredje-land-har-adekvat-skyddsniva/).
 
 According to our experience, these services are ubiquitously used and appreciated by Authorized Users.
 Therefore, we assessed that their usage does not add risk to the privacy of Authorized Users.
@@ -1736,6 +1762,14 @@ Therefore, we assessed that their usage does not add risk to the privacy of Auth
 ## A4.9 Contact information
 
 If you have any questions or concerns about our privacy policy, please contact us at [dpo@elastisys.com](mailto:dpo@elastisys.com).
+
+Name and contact details of the Data Controller:
+
+```
+Elastisys AB
+Org.nummer 556873-6135
+Kuratorvägen 2A, 907 36 Umeå, Sweden
+```
 
 ## A4.10 IT Systems Outside the Scope of this Privacy Policy
 
