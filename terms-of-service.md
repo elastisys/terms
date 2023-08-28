@@ -2,6 +2,7 @@
 Mini style guide:
 - Put one sentence per line. It makes diff-ing Markdown easier and does not affect the output.
 - Show the URL in the text too. It makes the URL visible if the ToS is ever delivered on paper. E.g., [https://example.com](https://example.com).
+- To avoid confusion, we try to only capitalize words which are defined within the ToS itself. For example, we capitalize "Sub-processor" and "Customer", but not "cluster" and "infrastructure provider". Currently, we don't define "cluster" and "infrastructure" in the ToS, since their exact definition is not critical to a commercial agreement.
 -->
 
 
@@ -9,7 +10,7 @@ Mini style guide:
 
 These Terms of Service set forth the terms between you ("**Customer**," "**you**," or "**your**") and Elastisys AB, org. no. 556873-6135, a company incorporated under the laws of Sweden, ("**Elastisys**," "**we**", or "**us**") and governs your access to and use of the Services, as defined below.
 
-These terms are applicable starting 2023-05-11.
+These terms are applicable starting 2023-09-28.
 Please find previous versions of the ToS at the following link:
 [https://github.com/elastisys/terms/commits/main/terms-of-service.md](https://github.com/elastisys/terms/commits/main/terms-of-service.md)
 
@@ -78,8 +79,8 @@ A Plan can either be a Premium Plan or a Standard Plan.
 
 **SERVICE(S)** means the managed service(s) offered by Elastisys under the Agreement as described in the appendices to these Terms (including Elastisys Compliant Kubernetes platform for running containerized applications and additional services).
 
-**SERVICE ACCESS POINTS** means the access points for the Service(s) made available to the Customer.
-The Service specific appendices set forth the Services Access Points for each provided Service.
+**SERVICE ENDPOINT(S)** means the API or UI endpoints for the Service(s) made available to the Customer.
+The Service specific appendices set forth the Services Endpoints for each provided Service.
 
 **SERVICE FEE** means the periodic fee for the Services (yearly or monthly) and the aggregated hourly fees for Professional Services, to be paid by the Customer to Elastisys.
 
@@ -148,9 +149,9 @@ Subject of the terms and conditions of the Agreement, Elastisys shall use commer
 - Force Majeure Events;
 - Failures or malfunctions in any Customer equipment or technology; and/or Customer Applications:
     - Downtime due to Node replacement (Customer Applications are expected to tolerate worker Node replacement, one Node at a time); and/or
-    - Downtime due to Service Access Point failover as can happen during maintenance or failures. (Customer Applications are expected to tolerate Access Point failover, by reconnecting to the newly promoted Service Access Point).
+    - Downtime due to Service Endpoint failover as can happen during maintenance or failures. (Customer Applications are expected to tolerate Service Endpoint failover, by reconnecting to the newly promoted Service Endpoint).
 
-Availability (uptime) is measured every minute for every Service Access Point, from external network location whenever possible.
+Availability (uptime) is measured every minute for every Service Endpoint, from external network location whenever possible.
 Managed Additional Services are measured from internal locations.
 
 Elastisys shall follow industry best practices to ensure Service Availability.
@@ -289,6 +290,8 @@ The Customer can choose to approve the release and if so, Elastisys installs the
 The Customer can also postpone the release if the Customer for example wants to verify that any changes to Customer-facing APIs are compatible with the Customer's Applications.
 Without an explicit written agreement with Elastisys, the Customer cannot postpone a release for more than the Service version lifecycle (see appendices for version lifecycle of each Service).
 
+If the Customer has multiple Environments, and one or more have been designated by the Customer to be non-production Environments, Elastisys will apply major and minor updates to the Customer's non-production Environment(s) at least five working days before applying said update to the Customer's production Environment(s).
+
 Should the Customer want to test upgrades in an additional environment, Elastisys can, subject to a Change Order, create a new Service Instance with the next major version.
 
 Elastisys performs all maintenance according to best practices and will take all commercially reasonable efforts to avoid downtime for Customers during maintenance.
@@ -333,7 +336,7 @@ All Service Fees are exclusive of VAT and other taxes and/or duties.
 Customer is responsible for all sales, use, and excise taxes, and any other similar taxes, duties, and charges of any kind imposed by any governmental or regulatory authority on any amounts payable by Customer hereunder.
 
 The Service Fee includes the cost of infrastructure required to run Service Instances and Customer Applications.
-Additional infrastructure used by Customer applications (such as storage for the application, external outbound network traffic , etc.) are added on top of Service Fee.
+Additional infrastructure used by Customer applications (such as storage for the application, external outbound/inbound network traffic, additional load-balancers, etc.) are added on top of Service Fee.
 
 Elastisys reserves the right to modify Service Fees for all Services with a notice period of 30 days.
 Updated Service Fees will override any original Service Fees stated in an Order.
@@ -703,7 +706,7 @@ Should the Customer require more permissions, this will be granted only after El
 IP allowlisting -- also called network-based access control -- adds an additional layer of security by only allowing access from a trusted set of IP addresses.
 Elastisys strongly recommends it as a complement to identity-based access control.
 
-As a bare minimum, the Customer should configure IP allowlisting on Compliant Kubernetes Service Access Points, such as the Kubernetes API.
+As a bare minimum, the Customer should configure IP allowlisting on Compliant Kubernetes Service Endpoints, such as the Kubernetes API.
 The Customer can easily request such IP allowlisting by filing a service ticket.
 
 The Customer can configure IP allowlisting on applications hosted inside a Compliant Kubernetes environment by following the public documentation at [https://elastisys.io/compliantkubernetes/user-guide/network-model/](https://elastisys.io/compliantkubernetes/user-guide/network-model/).
@@ -722,7 +725,7 @@ The Customer and Elastisys jointly decide on the exact implementation, taking in
 
 The backup scope includes:
 
-- All data and configuration required to fully restore an Environment and make all relevant Service(s) available through their Service Access Points.
+- All data and configuration required to fully restore an Environment and make all relevant Service(s) available through their Service Endpoints.
 - For Customer Kubernetes, this includes resources in Customer owned namespaces, such as Pods, Deployments, StatefulSets, DaemonSets, CronJobs, Services, Horizontal Pod Autoscalers, Pod Disruption Budgets, ConfigMaps, Secrets, NetworkPolicies, ServiceAccounts, Roles, RoleBindings, Ingresses, PersistentVolumeClaims, and any additional custom resources added upon service requests.
 - Customer Data stored on PersistentVolumes.
 - Backups are enabled by default. Customers can opt-out from all backups.
@@ -839,12 +842,12 @@ Responsibility assignment matrix; Responsible, Accountable, Consulted, Informed 
     <td>
         Installation and configuration of all related Compliant Kubernetes components:
         <ul>
-            <li>Setup of virtual machines and related infrastructure on the cloud provider</li>
+            <li>Setup of virtual machines and related infrastructure on the infrastructure provider</li>
             <li>Setup of Compliant Kubernetes</li>
             <li>Setup of related networking configuration (accessible on public Internet IP)</li>
             <li>Setup of initial user privileges</li>
         </ul>
-        Notes: Customer selects Environment dimensioning as well as authentication provider for installation.
+        Notes: Customer selects Environment dimensioning as well as identity provider for installation.
     </td>
     <td></td> <!-- Customer R -->
     <td>X</td> <!-- Customer A -->
@@ -884,7 +887,7 @@ Responsibility assignment matrix; Responsible, Accountable, Consulted, Informed 
     <td>
         Administration of relevant user privileges
         <br><br>
-        Notes: Connection to external authentication provider is the Customer’s responsibility
+        Notes: Connection to external identity provider is the Customer’s responsibility
     </td>
     <td></td> <!-- Customer R -->
     <td></td> <!-- Customer A -->
@@ -1219,7 +1222,7 @@ Responsibility assignment matrix; Responsible, Accountable, Consulted, Informed 
 
 Elastisys can manage the following additional services within an environment:
 
--   Databases: PostgreSQL versions 13 or 14.
+-   Databases: PostgreSQL versions 13, 14 or 15.
 -   Low-latency in-memory caches: Ephemeral Redis version 6
 -   Message queues: RabbitMQ version 3
 -   Time-series database: TimescaleDB Community (only open-source features are included)
@@ -1227,7 +1230,7 @@ Elastisys can manage the following additional services within an environment:
 For a complete and up-to-date description of the additional services, see the public documentation at
 [https://elastisys.io/compliantkubernetes/user-guide/additional-services/](https://elastisys.io/compliantkubernetes/user-guide/additional-services/)
 
-All instances of Additional services are replicated across three dedicated cluster nodes, with the exception of Standard Plan PostgreSQL that has two replicas.
+All instances of Additional services are replicated across three dedicated Nodes, with the exception of Standard Plan PostgreSQL that has two replicas.
 
 ## A3.2 Retention for logs and metrics
 
@@ -1373,7 +1376,7 @@ Responsibility assignment matrix; Responsible, Accountable, Consulted, Informed 
     <td>
         Installation and configuration of all related components:
         <ul>
-            <li>Setup of virtual machines and related infrastructure on the cloud provider</li>
+            <li>Setup of virtual machines and related infrastructure on the infrastructure provider</li>
             <li>Setup of additional services</li>
             <li>Setup of related networking configuration (accessible within an Environment)</li>
             <li>Setup of superuser privileges</li>
@@ -1748,10 +1751,11 @@ We use the following Processors for processing personal data of Authorized Users
 
 Name of Subprocessor | Description of Processing | Location of Processing | Corporate Location | DPA
 ---------------------|---------------------------|------------------------|--------------------|----
-Atlassian (JIRA) | service ticket handling | Global | Australia | [DPA](https://www.atlassian.com/legal/data-processing-addendum)
+Atlassian (JIRA) | service ticket handling | Global | US | [DPA](https://www.atlassian.com/legal/data-processing-addendum)
 Google Workspace (GMail, Drive) | Email communication, storing contact information | Global | US | [DPA](https://cloud.google.com/terms/data-processing-addendum)
+Telavox AB | Phone communication, storing contact information | Sweden | Sweden | DPA is stored internally
 
-As of 2023-02-03, both Australia and the US are third countries.
+As of 2023-05-31, the US is a third country.
 See what this means on IMY's website:
 [EN](https://www.imy.se/en/organisations/data-protection/this-applies-accordning-to-gdpr/transfer-of-data-to-a-third-country/)
 [SE](https://www.imy.se/vanliga-fragor-och-svar/hur-vet-vi-om-ett-tredje-land-har-adekvat-skyddsniva/).
