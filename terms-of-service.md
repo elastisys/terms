@@ -286,8 +286,9 @@ Maintenance windows are scheduled together with the customer according to the ti
 | Major updates | Updates that bring new features and improvements, but require careful coordination with the customer. Major updates are not expected to be backwards compatible and may require active actions from the Customer. | 08-17 CET | Service specific, see appendices |
 
 For Major updates, the Customer will be informed and provided a changelog upon Elastisys releases of new versions of Services.
-The Customer can choose to approve the release and if so, Elastisys installs the new release during the next maintenance window.
-The Customer can also postpone the release if the Customer for example wants to verify that any changes to Customer-facing APIs are compatible with the Customer's Applications.
+Elastisys installs the new release during the next maintenance window.
+The Customer can only postpone the release by filing a service ticket at least 1 business day before the day of the next maintenance window.
+This is useful if the Customer needs additional time to verify that any changes to Customer-facing APIs are compatible with the Customer's Applications.
 Without an explicit written agreement with Elastisys, the Customer cannot postpone a release for more than the Service version lifecycle (see appendices for version lifecycle of each Service).
 
 If the Customer has multiple Environments, and one or more have been designated by the Customer to be non-production Environments, Elastisys will apply major and minor updates to the Customer's non-production Environment(s) at least five working days before applying said update to the Customer's production Environment(s).
@@ -337,6 +338,12 @@ Customer is responsible for all sales, use, and excise taxes, and any other simi
 
 The Service Fee includes the cost of infrastructure required to run Service Instances and Customer Applications.
 Additional infrastructure used by Customer applications (such as storage for the application, external outbound/inbound network traffic, additional load-balancers, etc.) are added on top of Service Fee.
+
+Similarly, the infrastructure needed for the platform's internal components, such as logging, monitoring, and vulnerability scanning, are sized to meet the demands of average applications.
+The average needs of applications are calculated based on years worth of data from dozens of production-grade environments.
+To avoid the risk of data loss, applications that have greater than average needs will require a larger infrastructure footprint for the platform's internal components.
+For the Managed Service and as per the responsibility model (see Appendix A2.8 Division of responsibility) Elastisys will scale up that infrastructure.
+The additional costs for this are added to the Service Fee.
 
 Elastisys reserves the right to modify Service Fees for all Services with a notice period of 30 days.
 Updated Service Fees will override any original Service Fees stated in an Order.
@@ -604,6 +611,11 @@ If that is not practically or commercially reasonable according to the Sub-proce
 - upon prior approval from Sub-processor receive compensation from the Processor for any additional costs incurred by it due to such objection, or,
 - terminate the DPA on 45 days' notice.
 
+**A1.5.4** The Processor is hereby informed that the Sub-processor made the following assessment:
+The colocation providers hosting hardware which processes Personal Data are NOT sub-processors.
+The Sub-processor performed this assessment based on guidance from the Danish Data Protection Authority (Datatilsynet), periodic audits and periodic on-site visits to colocation providers.
+The Sub-processor closely monitors both the legal landscape and approved sub-processors, and will inform the Processor if said assessment changes.
+
 ## A1.6 Transfers to third countries
 
 **A1.6.1** The Sub-processor shall ensure that the Personal Data will be handled and stored within the EU/EEA by a natural or legal person who is established in the EU/EEA.
@@ -742,7 +754,7 @@ Some Customer Applications may need manual intervention after a recovery in orde
 **Recovery Point Objective:**
 
 - Backup frequency: once per day, to be performed between 0:00am and 3:00am CET.
-- Number of backups kept: 3
+- Backup retention is 30 days, unless otherwise agreed.
 - Long-term backup schemes can be enabled after discussion with the customer.
 
 The following link describes the safeguards that are taken to protect
