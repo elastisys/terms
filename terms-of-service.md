@@ -10,7 +10,18 @@ Mini style guide:
 
 These Terms of Service set forth the terms between you ("**Customer**," "**you**," or "**your**") and Elastisys AB, org. no. 556873-6135, a company incorporated under the laws of Sweden, ("**Elastisys**," "**we**", or "**us**") and governs your access to and use of the Services, as defined below.
 
-These terms are applicable starting 2023-09-28.
+The terms are valid for the following Elastisys offers:
+
+- **Managed Services**:
+    - **Standard Plan**: Compliant Kubernetes and Additional Services, Managed by Elastisys 6-22
+    - **Premium Plan**: Compliant Kubernetes and Additional Services, Managed by Elastisys 24/7
+- **Supported Services**:
+    - **Support Plan**: Compliant Kubernetes and Additional Services, Supported by Elastisys 8-17
+
+The main part of these terms (clauses 1 to 20) applies to all offers.
+Each appendix applies to the Services specified in the title.
+
+These terms are applicable starting 2023-11-17.
 Please find previous versions of the ToS at the following link:
 [https://github.com/elastisys/terms/commits/main/terms-of-service.md](https://github.com/elastisys/terms/commits/main/terms-of-service.md)
 
@@ -58,6 +69,17 @@ For the avoidance of doubt, Elastisys IP does not include Data owned by the Cust
 
 **GDPR** means Regulation (EU) 2016/679 of the European Parliament and the Council as amended, supplemented and/or varied from time to time.
 
+**INCIDENT** levels are defined as follows:
+
+- **CRITICAL INCIDENT**: Incidents that cause loss of service or continuous instability of mission-critical functionality and have no workaround.
+The incident causes or may cause a material adverse effect on the Customer's business or material parts of the operational services are unavailable.
+- **MAJOR INCIDENT**: Incidents that are impairing, but not causing loss of service or loss of mission-critical functionality.
+Intermittent issues that affect mission-critical functionality.
+The incident causes or may cause an adverse effect on the Customer's business or a critical function does not work, or work with response times that are inferior to the agreed-upon time.
+- **MINOR INCIDENT**: All other incidents.
+
+**MANAGED SERVICES** means delivery of Elastisys Compliant Kubernetes and Additional Services operated by Elastisys. The Customer does NOT have administrative access to Environments. Managed Services are offered with two Plans: Standard Plan and Premium Plan.
+
 **NODE** means a data plane (worker) Node in Kubernetes and may be either a virtual or a physical machine.
 
 **ORDER** means the signed business contract between the Parties.
@@ -69,7 +91,7 @@ For the avoidance of doubt, Elastisys IP does not include Data owned by the Cust
 **PERSONAL DATA BREACH** means breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorized disclosure of, or access to, Personal Data transmitted, stored, or otherwise Processed.
 
 **PLAN** means the combined uptime and support undertaking provided by Elastisys for one or more Environments as reflected in the Order.
-A Plan can either be a Premium Plan or a Standard Plan.
+A Plan can either be a Standard Plan, Premium Plan or a Support Plan.
 
 **PREVIEW FEATURE** is a feature which is explicitly sold and marketed as "preview".
 
@@ -77,7 +99,7 @@ A Plan can either be a Premium Plan or a Standard Plan.
 
 **PROFESSIONAL SERVICES** means separately ordered consultancy services provided by Elastisys on hourly rates and basis.
 
-**SERVICE(S)** means the managed service(s) offered by Elastisys under the Agreement as described in the appendices to these Terms (including Elastisys Compliant Kubernetes platform for running containerized applications and additional services).
+**SERVICE(S)** means the Managed Service(s) or Supported Service(s) offered by Elastisys under the Agreement as described in the appendices to these Terms (including Elastisys Compliant Kubernetes platform for running containerized applications and additional services).
 
 **SERVICE ENDPOINT(S)** means the API or UI endpoints for the Service(s) made available to the Customer.
 The Service specific appendices set forth the Services Endpoints for each provided Service.
@@ -95,6 +117,8 @@ The Plan chosen for additional Services delivered in connection with one Complia
 Service Start Date is specified in Order and if not, it shall be the date Elastisys announces that the Service is ready for use.
 
 **SUBPROCESSOR** A natural or legal person, public authority, agency or other body which, in the capacity of subcontractor to the Processor, Processes Personal Data on behalf of the Controller.
+
+**SUPPORTED SERVICES** means delivery of Elastisys Compliant Kubernetes and Additional Services operated by the Customer. The Customer has administrative access to Environments. Elastisys supports the Customer with operations. Supported Services are offered with one Plans: Support Plan.
 
 **TERMS** means these Terms of Service with all appendices.
 
@@ -143,35 +167,9 @@ Elastisys will have no liability for any damage, liabilities, losses (including 
 
 ### 3.1 Availability
 
-Subject of the terms and conditions of the Agreement, Elastisys shall use commercially reasonable efforts to make the Service(s) available 24 hours a day, 7 days a week, with the service availability specified below ("**Service Availability**"), except for:
+For Managed Services, Elastisys is responsible for uptime (see [A2.1.1 Availability](#a211-availability)).
 
-- Planned downtime and maintenance events;
-- Force Majeure Events;
-- Failures or malfunctions in any Customer equipment or technology; and/or Customer Applications:
-    - Downtime due to Node replacement (Customer Applications are expected to tolerate worker Node replacement, one Node at a time); and/or
-    - Downtime due to Service Endpoint failover as can happen during maintenance or failures. (Customer Applications are expected to tolerate Service Endpoint failover, by reconnecting to the newly promoted Service Endpoint).
-
-Availability (uptime) is measured every minute for every Service Endpoint, from external network location whenever possible.
-Managed Additional Services are measured from internal locations.
-
-Elastisys shall follow industry best practices to ensure Service Availability.
-In particular, Elastisys shall adjust the size of Service Instances and replication of Service Instances, as required to maintain Service Availability.
-Elastisys guarantees Availability of each Service according to the following:
-
-|   | Premium Plan | Standard Plan |
-| --- | --- | --- |
-| Service Availability  | 99.9% <br> 99.95%\* (geo-redundant deployment) | Best effort |
-| Service downtime allowed per month | 44 minutes \*\* | N/A |
-| Penalty \*\*\* | Calculation is based on total monthly fee for the Service Instance<br>Less than 99.9%: 10% credit<br>Less than 99.0%: 25% credit<br>Less than 95.0%: 50% credit | No penalties apply |
-
-
-\* 99.95% Service Availability for Premium Plan services deployed in
-geo-redundant setups that tolerate data center outages.
-
-\*\* 44 minutes (43m 49s) is the maximum allowed downtime in a month (30
-days or 43 200 minutes).
-
-\*\*\* Upon customer request.
+For Supported Services, the Customer is responsible for uptime in consultation with Elastisys (see [A5.4 Division of responsibility](#a54-division-of-responsibility)).
 
 ### 3.2 Ways of Contact
 
@@ -192,113 +190,70 @@ When submitting a Change Order, the Customer agrees and acknowledges that Custom
 
 ### 3.4 Incident Levels and Response Time
 
-<!-- Fall back to HTML, since Markdown does not support colspan -->
-<table>
-<thead>
-<tr>
-    <th>&nbsp;</th>
-    <th>&nbsp;</th>
-    <th colspan="2">Premium Plan***</th>
-    <th colspan="2">
-        Standard Plan
-        <br>
-        (Incident management:
-        <br>
-        6am to 22pm CET)
-    </th>
-</tr>
-<tr>
-    <th>Priority level</th>
-    <th>Definition</th>
-    <th>Response time*</th>
-    <th>Solution target time</th>
-    <th>Response time*</th>
-    <th>Solution target time</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td>Critical Incident</td>
-    <td>
-        Incidents that cause loss of service or continuous instability of mission-critical functionality and have no workaround.
-        The incident causes or may cause a material adverse effect on the Customer's business or material parts of the operational services are unavailable.
-    </td>
-    <td>60 min</td>
-    <td>&lt;4 hours</td>
-    <td>60 min**</td>
-    <td>&lt;4 hours**</td>
-</tr>
-<tr>
-    <td>Major Incident</td>
-    <td>
-        Incidents that are impairing, but not causing loss of service or loss of mission-critical functionality.
-        Intermittent issues that affect mission-critical functionality.
-        The incident causes or may cause an adverse effect on the Customer's business or a critical function does not work, or work with response times that are inferior to the agreed-upon time.
-    </td>
-    <td>2 hours</td>
-    <td>&lt;12 hours</td>
-    <td>2 hours**</td>
-    <td>&lt;12 hours**</td>
-</tr>
-<tr>
-    <td>Minor Incident</td>
-    <td>All other incidents</td>
-    <td>1 Business Day</td>
-    <td>N/A</td>
-    <td>1 Business Day</td>
-    <td>N/A</td>
-</tr>
-<tr>
-    <td>Change Order</td>
-    <td>Change orders as defined in Change Management above, for changes allowed as per service specifications in appendices.</td>
-    <td>1 Business Day</td>
-    <td>1 Business Day</td>
-    <td>1 Business Day</td>
-    <td>N/A</td>
-</tr>
-<tr>
-    <td>General Questions</td>
-    <td>&nbsp;</td>
-    <td>Reasonable Efforts to Answer within 1 Business Day</td>
-    <td>&nbsp;</td>
-    <td>Reasonable Efforts to Answer within 1 Business Day</td>
-    <td>&nbsp;</td>
-</tr>
-</tbody>
-</table>
 
-\* Response time from a qualified engineer measured from incident start or notification by the Customer
+For Managed Services, Elastisys responds as stipulated in [A2.1.2 Response Time](#a212-response-time).
 
-\*\* Response time and target solutions times only applies between 06am and 22pm CET for Standard plan Environments.
-
-\*\*\* Environments with the Premium Plan are required to go through the go-live checklist ([https://elastisys.io/compliantkubernetes/user-guide/go-live/](https://elastisys.io/compliantkubernetes/user-guide/go-live/)) before any uptime service levels are enforced.
+For Supported Services, Elastisys responds as stipulated in [A5.2 Response Time](#a52-response-time).
 
 ### 3.5 Updates and Upgrades
 
-Elastisys uses maintenance windows to take proactive measures for maintaining the stability and security of the Services.
-Maintenance windows are scheduled together with the customer according to the time frames below.
+For all offers, Elastisys is responsible for producing Service updates and upgrades.
+For Managed Services, Elastisys is responsible for applying updates and upgrades (see [A2.6 Updates and Upgrades](#a26-updates-and-upgrades)).
+For Supported Services, the Customer is responsible for applying updates and upgrades in consultation with Elastisys (see [A5.4 Division of responsibility](#a54-division-of-responsibility)).
 
-| Type | Definition | Time frame | Frequency |
-|---|---|---|---|
-| Critical security patches | Patches to fix known vulnerabilities that Elastisys assessed as posing immediate risk to Customer Data. | Immediately | Immediately |
-| Non-critical security patches  | Patches to fix known vulnerabilities that Elastisys assessed as posing a security risk, but no data is at immediate risk. | 22-05 CET | At most daily |
-| Minor updates | Updates that bring new features and improvements, without requiring careful coordination with the Customer. Minor updates are expected to be backwards compatible and incur negligible risk of downtime. | 08-17 CET  | At most monthly |
-| Major updates | Updates that bring new features and improvements, but require careful coordination with the customer. Major updates are not expected to be backwards compatible and may require active actions from the Customer. | 08-17 CET | Service specific, see appendices |
+### 3.6 Vulnerability Management
 
-For Major updates, the Customer will be informed and provided a changelog upon Elastisys releases of new versions of Services.
-Elastisys installs the new release during the next maintenance window.
-The Customer can only postpone the release by filing a service ticket at least 1 business day before the day of the next maintenance window.
-This is useful if the Customer needs additional time to verify that any changes to Customer-facing APIs are compatible with the Customer's Applications.
-Without an explicit written agreement with Elastisys, the Customer cannot postpone a release for more than the Service version lifecycle (see appendices for version lifecycle of each Service).
+Elastisys makes commercially reasonable efforts to ensure that the provided Services are free from security vulnerabilities which are either publicly known or known to Elastisys, and which can put Customer systems and Customer Data at risk, inter alia:
 
-If the Customer has multiple Environments, and one or more have been designated by the Customer to be non-production Environments, Elastisys will apply major and minor updates to the Customer's non-production Environment(s) at least five working days before applying said update to the Customer's production Environment(s).
+* **Prepare**: Elastisys prepares for vulnerability management as follows:
+    * control what software components are added to software used by Elastisys;
+    * ensure software components are provisioned from vendors which have demonstrated good vulnerability management;
+    * ensure the Software Bill of Materials (SBOM) is up-to-date;
+    * subscribe to security announcements issued by vendors of software components used by Elastisys;
+    * setup [Elastisys vulnerability disclosure channels](https://github.com/elastisys/compliantkubernetes-apps/blob/main/SECURITY.md);
+    * ensure via its [CNCF membership](https://landscape.cncf.io/members?selected=elastisys-member) that open-source projects are sufficiently funded for good vulnerability management;
+* **Detect**: Elastisys will detect vulnerabilities as follows:
+    * monitor security announcements issued by vendors of software components used by Elastisys;
+    * monitor [Elastisys vulnerability disclosure channels](https://github.com/elastisys/compliantkubernetes-apps/blob/main/SECURITY.md) and timely fix reported vulnerabilities;
+* **Respond**: Elastisys will respond to vulnerabilities without undue delay by determining if a vulnerability will put Customer systems and Customer Data at risk; and if so:
+    * release and apply countermeasures –  such as firewall rules or disable functionality – so  as to limit the impact of the vulnerability;
+    * work with vendors to ensure timely release of security patches for software components with are part of the Service;
+    * release security patches for software included in the Services;
+    * for Managed Services apply security patches for the software included in the Services;
+    * for Supported Service inform the customer and help them apply security patches for software included in the Services;
+* **Recover**: Elastisys will recover from vulnerabilities as follows:
+    * identify opportunities to reduce the likelihood or impact of future vulnerabilities
 
-Should the Customer want to test upgrades in an additional environment, Elastisys can, subject to a Change Order, create a new Service Instance with the next major version.
 
-Elastisys performs all maintenance according to best practices and will take all commercially reasonable efforts to avoid downtime for Customers during maintenance.
-Customers are recommended to implement robust applications that tolerate the above maintenance, such as node replacements and Service(s) restart, e.g., as per the go live checklist:
-[https://elastisys.io/compliantkubernetes/user-guide/go-live/](https://elastisys.io/compliantkubernetes/user-guide/go-live/).
-Any caused downtime during maintenance is not counted against the Service Availability, as detailed in the above section about Availability.
+#### Illustrative Example: Third-party security researcher reports a vulnerability to a vendor
+
+A typical sequence of events is:
+
+1. A third-party security researcher reports a vulnerability to the vendor, via the vendor's security disclosure channels.
+For example, for a vulnerability found in Kubernetes, the communication between the security researcher and the vendor proceeds as written in the [Kubernetes Security and Disclosure Information](https://kubernetes.io/docs/reference/issues-security/security/) page.
+2. The vendor releases a security patch and announces it via its security announcement channels.
+For example, for a vulnerability found in Kubernetes, an email is sent to the `kubernetes-security-announce@googlegroups.com` mailing list.
+3. Elastisys becomes aware of the security patch via the vendor's security announcement channels, because Elastisys is subscribed to all security announcement channels of the relevant software components.
+4. Elastisys incorporates the security patch into Compliant Kubernetes and releases a new version of Compliant Kubernetes.
+5. Elastisys informs Supported Service Customers via Slack and/or email that a new security patch was released for Compliant Kubernetes.
+6. The Supported Service Customers in collaboration with Elastisys apply the newly released version of Compliant Kubernetes.
+7. Elastisys applies the security patch for Managed Service Customers.
+
+#### Illustrative Example: Third-party security researcher reports a vulnerability to Elastisys
+
+A typical sequence of events is:
+
+1. A third-party security researcher reports a vulnerability to Elastisys, via Elastisys's public security disclosure channel (see [link](https://github.com/elastisys/compliantkubernetes-apps/blob/main/SECURITY.md)).
+2. Elastisys identifies the affected component and which vendor it belongs to.
+3. Elastisys collaborates with the vendor, via their security disclosure channels.
+For example, for a vulnerability found in Kubernetes, the communication between the security researcher and the vendor proceeds as written in the [Kubernetes Security and Disclosure Information](https://kubernetes.io/docs/reference/issues-security/security/) page.
+2. The vendor releases a security patch and announces it via its security announcement channels.
+For example, for a vulnerability found in Kubernetes, an email is sent to the `kubernetes-security-announce@googlegroups.com` mailing list.
+3. Elastisys becomes aware of the security patch via the vendor's security announcement channels, because Elastisys is subscribed to all security announcement channels of the relevant software components.
+4. Elastisys incorporates the security patch into Compliant Kubernetes and releases a new version of Compliant Kubernetes.
+5. Elastisys informs Supported Service Customers via Slack and/or email that a new security patch was released for Compliant Kubernetes.
+6. The Supported Service Customers in collaboration with Elastisys apply the newly released version of Compliant Kubernetes.
+7. Elastisys applies the security patch for Managed Service Customers.
 
 ## 4. Elastisys Obligations
 
@@ -541,7 +496,9 @@ In the latter case, the SCC shall also decide whether the Arbitral Tribunal shal
 The place of the arbitration proceedings shall be Stockholm, and the language of the proceeding shall be English, unless both Parties are Swedish entities.
 In such case, the language of the proceeding shall be Swedish.
 
-# Appendix 1 Data Processing Agreement
+# Appendix 1 Data Processing Agreement [All Services]
+
+This Appendix applies to both Managed Services and Supported Services.
 
 This Data Processing Agreement (the "DPA") between the Customer (below, the "**Processor**") and **Elastisys AB** (below, the **"Sub-processor**") constitutes a part of the Agreement, under which the Sub-processor will process personal data on behalf of the Processor when supplying the Service (including any Professional Services).
 
@@ -674,7 +631,9 @@ The Sub-processor will erase the Personal Data from its systems no earlier than 
 
 **A1.12.1** This DPA shall, notwithstanding the terms of the Agreement, enter into effect when the Sub-processor commences to process Personal Data on behalf of the Processor and shall terminate when the Sub-processor has erased the Personal Data in accordance with Section A1.11 above.
 
-# Appendix 2 Managed Compliant Kubernetes Service Specification
+# Appendix 2 Managed Compliant Kubernetes Service Specification [Managed Services only]
+
+This Appendix applies only to Managed Services.
 
 ## A2.1 Service specification
 
@@ -687,6 +646,104 @@ For a complete and up-to-date description of Compliant Kubernetes, see the publi
 [https://elastisys.io/compliantkubernetes/](https://elastisys.io/compliantkubernetes/)
 
 Managed Compliant Kubernetes is Compliant Kubernetes offered by Elastisys as a managed service.
+
+## A2.1.1 Availability
+
+Subject of the terms and conditions of the Agreement, Elastisys shall use commercially reasonable efforts to make the Service(s) available 24 hours a day, 7 days a week, with the service availability specified below ("**Service Availability**"), except for:
+
+- Planned downtime and maintenance events;
+- Force Majeure Events;
+- Failures or malfunctions in any Customer equipment or technology; and/or Customer Applications:
+    - Downtime due to Node replacement (Customer Applications are expected to tolerate worker Node replacement, one Node at a time); and/or
+    - Downtime due to Service Endpoint failover as can happen during maintenance or failures. (Customer Applications are expected to tolerate Service Endpoint failover, by reconnecting to the newly promoted Service Endpoint).
+
+Availability (uptime) is measured every minute for every Service Endpoint, from external network location whenever possible.
+Managed Additional Services are measured from internal locations.
+
+Elastisys shall follow industry best practices to ensure Service Availability.
+In particular, Elastisys shall adjust the size of Service Instances and replication of Service Instances, as required to maintain Service Availability.
+Elastisys guarantees Availability of each Service according to the following:
+
+|   | Premium Plan | Standard Plan |
+| --- | --- | --- |
+| Service Availability  | 99.9% <br> 99.95%\* (geo-redundant deployment) | Best effort |
+| Service downtime allowed per month | 44 minutes \*\* | N/A |
+| Penalty \*\*\* | Calculation is based on total monthly fee for the Service Instance<br>Less than 99.9%: 10% credit<br>Less than 99.0%: 25% credit<br>Less than 95.0%: 50% credit | No penalties apply |
+
+
+\* 99.95% Service Availability for Premium Plan services deployed in
+geo-redundant setups that tolerate data center outages.
+
+\*\* 44 minutes (43m 49s) is the maximum allowed downtime in a month (30
+days or 43 200 minutes).
+
+\*\*\* Upon customer request.
+
+## A2.1.2 Response Time
+
+<!-- Fall back to HTML, since Markdown does not support colspan -->
+<table>
+<thead>
+<tr>
+    <th>&nbsp;</th>
+    <th colspan="2">Premium Plan***</th>
+    <th colspan="2">
+        Standard Plan
+        <br>
+        (Incident management:
+        <br>
+        6am to 22pm CET)
+    </th>
+</tr>
+<tr>
+    <th>Priority level</th>
+    <th>Response time*</th>
+    <th>Solution target time</th>
+    <th>Response time*</th>
+    <th>Solution target time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>Critical Incident</td>
+    <td>60 min</td>
+    <td>4 h</td>
+    <td>60 min**</td>
+    <td>4 h**</td>
+</tr>
+<tr>
+    <td>Major Incident</td>
+    <td>2 h</td>
+    <td>12 h</td>
+    <td>2 h**</td>
+    <td>12 h**</td>
+</tr>
+<tr>
+    <td>Minor Incident</td>
+    <td>1 day ‡</td>
+    <td>N/A</td>
+    <td>1 day ‡</td>
+    <td>N/A</td>
+</tr>
+<tr>
+    <td>Change Order</td>
+    <td>1 day ‡</td>
+    <td>1 day ‡</td>
+    <td>1 day ‡</td>
+    <td>N/A</td>
+</tr>
+</tbody>
+</table>
+
+For General Questions, Elastisys will make commercially reasonable effort to answer witin 1 official Swedish business day.
+
+\* Response time from a qualified engineer measured from incident start or notification by the Customer
+
+\*\* Response time and target solutions times only applies between 06am and 22pm CET for Standard plan Environments.
+
+\*\*\* Environments with the Premium Plan are required to go through the go-live checklist ([https://elastisys.io/compliantkubernetes/user-guide/go-live/](https://elastisys.io/compliantkubernetes/user-guide/go-live/)) before any uptime service levels are enforced.
+
+‡ Official Swedish business day
 
 ## A2.2 Retention for logs and metrics
 
@@ -769,6 +826,31 @@ The up-to-date policy for Capacity Management can be found at:
 [https://elastisys.io/compliantkubernetes/operator-manual/capacity-management/](https://elastisys.io/compliantkubernetes/operator-manual/capacity-management/)
 
 ## A2.6 Updates and upgrades
+
+Elastisys uses maintenance windows to take proactive measures for maintaining the stability and security of the Services.
+Maintenance windows are scheduled together with the customer according to the time frames below.
+
+| Type | Definition | Time frame | Frequency |
+|---|---|---|---|
+| Critical security patches | Patches to fix known vulnerabilities that Elastisys assessed as posing immediate risk to Customer Data. | Immediately | Immediately |
+| Non-critical security patches  | Patches to fix known vulnerabilities that Elastisys assessed as posing a security risk, but no data is at immediate risk. | 22-05 CET | At most daily |
+| Minor updates | Updates that bring new features and improvements, without requiring careful coordination with the Customer. Minor updates are expected to be backwards compatible and incur negligible risk of downtime. | 08-17 CET  | At most monthly |
+| Major updates | Updates that bring new features and improvements, but require careful coordination with the customer. Major updates are not expected to be backwards compatible and may require active actions from the Customer. | 08-17 CET | Service specific, see appendices |
+
+For Major updates, the Customer will be informed and provided a changelog upon Elastisys releases of new versions of Services.
+Elastisys installs the new release during the next maintenance window.
+The Customer can only postpone the release by filing a service ticket at least 1 business day before the day of the next maintenance window.
+This is useful if the Customer needs additional time to verify that any changes to Customer-facing APIs are compatible with the Customer's Applications.
+Without an explicit written agreement with Elastisys, the Customer cannot postpone a release for more than the Service version lifecycle (see appendices for version lifecycle of each Service).
+
+If the Customer has multiple Environments, and one or more have been designated by the Customer to be non-production Environments, Elastisys will apply major and minor updates to the Customer's non-production Environment(s) at least five working days before applying said update to the Customer's production Environment(s).
+
+Should the Customer want to test upgrades in an additional environment, Elastisys can, subject to a Change Order, create a new Service Instance with the next major version.
+
+Elastisys performs all maintenance according to best practices and will take all commercially reasonable efforts to avoid downtime for Customers during maintenance.
+Customers are recommended to implement robust applications that tolerate the above maintenance, such as node replacements and Service(s) restart, e.g., as per the go live checklist:
+[https://elastisys.io/compliantkubernetes/user-guide/go-live/](https://elastisys.io/compliantkubernetes/user-guide/go-live/).
+Any caused downtime during maintenance is not counted against the Service Availability, as detailed in the above section about Availability.
 
 For Compliant Kubernetes, major upgrades are foreseen approximately 3 times per year, as per Kubernetes release cycle at
 [https://kubernetes.io/releases/release/](https://kubernetes.io/releases/release/)
@@ -1228,7 +1310,9 @@ Responsibility assignment matrix; Responsible, Accountable, Consulted, Informed 
 </tbody>
 </table>
 
-# Appendix 3 Managed Additional Service Specification
+# Appendix 3 Managed Additional Service Specification [Managed Services only]
+
+This Appendix applies only to Managed Services.
 
 ## A3.1 Service Specification
 
@@ -1307,7 +1391,7 @@ For PostgreSQL, major upgrades are foreseen approximately 1 times per year, as p
 
 For RabbitMQ and Redis, major upgrades will be available depending on upstream releases and Elastisys's risk assessment on the stability and security of the new major releases.
 
-Minor upgrades for Additional services are performed as specified in Section 3.5.
+Minor upgrades for Additional services are performed as specified in Section [A2.6](#a26-updates-and-upgrades).
 
 ## A3.7 Change Order
 
@@ -1697,7 +1781,9 @@ Responsibility assignment matrix; Responsible, Accountable, Consulted, Informed 
 </tbody>
 </table>
 
-# Appendix 4 Privacy Policy for Authorized Users
+# Appendix 4 Privacy Policy for Authorized Users [All Services]
+
+This Appendix applies to both Managed Services and Supported Services.
 
 ## A4.1 Introduction
 
@@ -1796,3 +1882,360 @@ Elastisys uses a self-hosted Yopass instance to secure share secrets.
 IP addresses are only processed as much as technically required.
 We do not retain personal data in Yopass.
 We advise customers to access Yopass from their corporate network, so their IP addresses do not constitude personal data.
+
+# Appendix 5 Supported Service Specification [Supported Services only]
+
+This Appendix applies only to Supported Services.
+
+## A5.1 Service specification
+
+Elastisys Compliant Kubernetes is a platform for running containerized applications and additional services -- e.g., databases, message queues, and key-value caches -- as required to comply with data protection regulations.
+Besides the ability to run containerized applications, Compliant Kubernetes comes with out-of-the-box security and observability.
+
+Compliant Kubernetes can be integrated with the customer's Identity Provider to facilitate compliance with Customer's access control policy.
+
+For a complete and up-to-date description of Compliant Kubernetes, see the public documentation at
+[https://elastisys.io/compliantkubernetes/](https://elastisys.io/compliantkubernetes/)
+
+Supported Services -- such as Compliant Kubernetes and Additional Services -- are operated by the Customer with support from Elastisys. Elastisys does not have access to Customer Environments, unless otherwise agreed.
+
+Supported Services give the Customer access to experienced, motivated, highly skilled, and knowledgeable technical support engineers, within the response times stipulated below.
+
+The Customer benefits with peace of mind and cost savings by:
+
+- not having to develop an in-house Kubernetes-based platform;
+- not having to hire an expensive in-house team of Kubernetes and Cloud Native experts;
+- not having to "scramble" to find Kubernetes and Cloud Native experts to help deal with incidents and disasters.
+
+Elastisys trains the Customer's in-house operations team as required for them to handle first-line operations.
+Elastisys virtually extends the Customer's on-call team with second-line operational support.
+
+## A5.2 Response Time
+
+<!-- Fall back to HTML, since Markdown does not support colspan -->
+<table>
+<thead>
+<tr>
+    <th>&nbsp;</th>
+    <th colspan="2">
+        Support Plan
+        <br>
+        (8am to 17pm CET)
+    </th>
+</tr>
+<tr>
+    <th>Priority level</th>
+    <th>Response time*</th>
+    <th>Solution target time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>Critical Incident</td>
+    <td>60 min †</td>
+    <td>4 h †</td>
+</tr>
+<tr>
+    <td>Major Incident</td>
+    <td>2 h †</td>
+    <td>12 h †</td>
+</tr>
+<tr>
+    <td>Minor Incident</td>
+    <td>1 day ‡</td>
+    <td>N/A</td>
+</tr>
+<tr>
+    <td>Change Order</td>
+    <td>1 day ‡</td>
+    <td>N/A</td>
+</tr>
+</tbody>
+</table>
+
+For General Questions, Elastisys will make commercially reasonable effort to answer within 1 official Swedish business day.
+
+\* Response time from a qualified engineer measured from incident start or notification by the Customer
+
+† Response time and target solutions times only applies between 08am and 17pm CET for Support Plan Environments.
+
+‡ Official Swedish business day
+
+## A5.3 As a whole, for the intended use-case
+
+We optimized our product management, architecture design, development and quality assurance processes for the intended use-case of running a secure platform for containerized applications.
+Therefore, we can only provide support for Compliant Kubernetes as a whole for said use-case.
+
+We are aware that it is technically possible to split Compliant Kubernetes and use some of its components in isolation.
+We are also aware that some or all of said components can be used for other use-cases.
+However, such use has unknown consequences and is untested by Elastisys.
+Therefore, such use is not within the scope of the Support Plan.
+
+## A5.4 Division of responsibility
+
+Unless otherwise agreed, responsibilities between the Customer and Elastisys are divided according to the Responsibility assignment matrix -- Responsible, Accountable, Consulted, Informed (RACI) -- below.
+
+Note that, the Customer is overall responsible to ensure Customer Data confidentiality, availability and integrity.
+
+### Platform Development
+
+<!-- Fall back to HTML, since Markdown does not support colspan -->
+<table>
+<thead>
+<tr>
+    <th rowspan="2">Activity</th>
+    <th colspan="4">Customer</th>
+    <th colspan="4">Elastisys</th>
+</tr>
+<tr>
+    <th>R</th>
+    <th>A</th>
+    <th>C</th>
+    <th>I</th>
+    <th>R</th>
+    <th>A</th>
+    <th>C</th>
+    <th>I</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>Definition of Compliant Kubernetes Architecture</td>
+    <td></td> <!-- Customer R -->
+    <td></td> <!-- Customer A -->
+    <td></td> <!-- Customer C -->
+    <td>X</td> <!-- Customer I -->
+    <td>X</td> <!-- Elastisys R -->
+    <td>X</td> <!-- Elastisys A -->
+    <td></td> <!-- Elastisys C -->
+    <td></td> <!-- Elastisys I -->
+</tr>
+<tr>
+    <td>Releasing Compliant Kubernetes security patches</td>
+    <td></td> <!-- Customer R -->
+    <td></td> <!-- Customer A -->
+    <td></td> <!-- Customer C -->
+    <td>X</td> <!-- Customer I -->
+    <td>X</td> <!-- Elastisys R -->
+    <td>X</td> <!-- Elastisys A -->
+    <td></td> <!-- Elastisys C -->
+    <td></td> <!-- Elastisys I -->
+</tr>
+<tr>
+    <td>Keeping Troubleshooting documentation up-to-date</td>
+    <td></td> <!-- Customer R -->
+    <td></td> <!-- Customer A -->
+    <td></td> <!-- Customer C -->
+    <td>X</td> <!-- Customer I -->
+    <td>X</td> <!-- Elastisys R -->
+    <td>X</td> <!-- Elastisys A -->
+    <td></td> <!-- Elastisys C -->
+    <td></td> <!-- Elastisys I -->
+</tr>
+</tbody>
+</table>
+
+### Application Development and Operations
+
+<!-- Fall back to HTML, since Markdown does not support colspan -->
+<table>
+<thead>
+<tr>
+    <th rowspan="2">Activity</th>
+    <th colspan="4">Customer</th>
+    <th colspan="4">Elastisys</th>
+</tr>
+<tr>
+    <th>R</th>
+    <th>A</th>
+    <th>C</th>
+    <th>I</th>
+    <th>R</th>
+    <th>A</th>
+    <th>C</th>
+    <th>I</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>Ensure the application conforms to good containerization practices, both for security and stability</td>
+    <td>X</td> <!-- Customer R -->
+    <td>X</td> <!-- Customer A -->
+    <td></td> <!-- Customer C -->
+    <td></td> <!-- Customer I -->
+    <td></td> <!-- Elastisys R -->
+    <td></td> <!-- Elastisys A -->
+    <td>X*</td> <!-- Elastisys C -->
+    <td></td> <!-- Elastisys I -->
+</tr>
+</tbody>
+</table>
+
+\* Elastisys is a [Kubernetes Training Partner](https://elastisys.com/training/) and can provide experienced consultants integrated with the Customer's application team. This enables the application team and their application to use the Compliant Kubernetes platform in the best possible way.
+
+### Platform Operations
+
+<!-- Fall back to HTML, since Markdown does not support colspan -->
+<table>
+<thead>
+<tr>
+    <th rowspan="2">Activity</th>
+    <th colspan="4">Customer</th>
+    <th colspan="4">Elastisys</th>
+</tr>
+<tr>
+    <th>R</th>
+    <th>A</th>
+    <th>C</th>
+    <th>I</th>
+    <th>R</th>
+    <th>A</th>
+    <th>C</th>
+    <th>I</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>Audit the underlying infrastructure to ensure its suitability given the Customer's security and stability goals</td>
+    <td>X</td> <!-- Customer R -->
+    <td>X</td> <!-- Customer A -->
+    <td></td> <!-- Customer C -->
+    <td></td> <!-- Customer I -->
+    <td></td> <!-- Elastisys R -->
+    <td></td> <!-- Elastisys A -->
+    <td>X*</td> <!-- Elastisys C -->
+    <td></td> <!-- Elastisys I -->
+</tr>
+<tr>
+    <td>Installing Compliant Kubernetes</td>
+    <td>X</td> <!-- Customer R -->
+    <td>X</td> <!-- Customer A -->
+    <td></td> <!-- Customer C -->
+    <td></td> <!-- Customer I -->
+    <td></td> <!-- Elastisys R -->
+    <td></td> <!-- Elastisys A -->
+    <td>X*</td> <!-- Elastisys C -->
+    <td></td> <!-- Elastisys I -->
+</tr>
+<tr>
+    <td>Configuring Compliant Kubernetes</td>
+    <td>X</td> <!-- Customer R -->
+    <td>X</td> <!-- Customer A -->
+    <td></td> <!-- Customer C -->
+    <td></td> <!-- Customer I -->
+    <td></td> <!-- Elastisys R -->
+    <td></td> <!-- Elastisys A -->
+    <td>X*</td> <!-- Elastisys C -->
+    <td></td> <!-- Elastisys I -->
+</tr>
+<tr>
+    <td>Monitoring uptime of Compliant Kubernetes endpoints</td>
+    <td>X</td> <!-- Customer R -->
+    <td>X</td> <!-- Customer A -->
+    <td></td> <!-- Customer C -->
+    <td></td> <!-- Customer I -->
+    <td></td> <!-- Elastisys R -->
+    <td></td> <!-- Elastisys A -->
+    <td>X*</td> <!-- Elastisys C -->
+    <td></td> <!-- Elastisys I -->
+</tr>
+<tr>
+    <td>Troubleshooting Compliant Kubernetes</td>
+    <td>X</td> <!-- Customer R -->
+    <td>X</td> <!-- Customer A -->
+    <td></td> <!-- Customer C -->
+    <td></td> <!-- Customer I -->
+    <td></td> <!-- Elastisys R -->
+    <td></td> <!-- Elastisys A -->
+    <td>X*</td> <!-- Elastisys C -->
+    <td></td> <!-- Elastisys I -->
+</tr>
+<tr>
+    <td>Applying updates and security patches</td>
+    <td>X</td> <!-- Customer R -->
+    <td>X</td> <!-- Customer A -->
+    <td></td> <!-- Customer C -->
+    <td></td> <!-- Customer I -->
+    <td></td> <!-- Elastisys R -->
+    <td></td> <!-- Elastisys A -->
+    <td>X*</td> <!-- Elastisys C -->
+    <td></td> <!-- Elastisys I -->
+</tr>
+<tr>
+    <td>Monitor and adjust capacity as needed</td>
+    <td>X</td> <!-- Customer R -->
+    <td>X</td> <!-- Customer A -->
+    <td></td> <!-- Customer C -->
+    <td></td> <!-- Customer I -->
+    <td></td> <!-- Elastisys R -->
+    <td></td> <!-- Elastisys A -->
+    <td>X*</td> <!-- Elastisys C -->
+    <td></td> <!-- Elastisys I -->
+</tr>
+<tr>
+    <td>Periodically perform disaster recovery drills</td>
+    <td>X</td> <!-- Customer R -->
+    <td>X</td> <!-- Customer A -->
+    <td></td> <!-- Customer C -->
+    <td></td> <!-- Customer I -->
+    <td></td> <!-- Elastisys R -->
+    <td></td> <!-- Elastisys A -->
+    <td>X*</td> <!-- Elastisys C -->
+    <td></td> <!-- Elastisys I -->
+</tr>
+<tr>
+    <td>Monitor and ensure stability of the underlying infrastructure</td>
+    <td>X</td> <!-- Customer R -->
+    <td>X</td> <!-- Customer A -->
+    <td></td> <!-- Customer C -->
+    <td></td> <!-- Customer I -->
+    <td></td> <!-- Elastisys R -->
+    <td></td> <!-- Elastisys A -->
+    <td></td> <!-- Elastisys C -->
+    <td></td> <!-- Elastisys I -->
+</tr>
+</tbody>
+</table>
+
+\* With a basis in the [Compliant Kubernetes public documentation](https://elastisys.io/compliantkubernetes/operator-manual/), Elastisys supports the customer in finding, understanding and also performing the necessary steps to achieve platform-related administration.
+
+## A5.5 Pricing
+
+The Customer is charged for:
+
+- **support** on the basis of a monthly subscription;
+- **consultancy** on a time-and-material basis;
+- **training** on an as-needed basis.
+
+## A5.5.1 Support
+
+Support covers handling support tickets within the scope of the platform, such as:
+
+- help with creating and terminating Environments or Additional Services;
+- help with applying platform upgrades and security patches;
+- help with troubleshooting;
+- help with disaster recovery training and execution (maximum 2 times per year).
+
+These activities are covered by the stipulated response times.
+
+## A5.5.2 Consultancy
+
+Consultancy on a T&M basis, such as:
+
+- activities required for configuring systems and applications owned by the Customer as needed to run the platform, such as:
+    - infrastructure audits;
+    - devising the architecture of the infrastructure upon which an Environment shall be deployed;
+    - helping out the Customer configure their Identity Provider (IdP);
+    - helping out the Customer configure their infrastructure;
+    - test that the infrastructure and IdP were configured as needed;
+    - alert tuning;
+    - initial disaster recovery and business continuity testing;
+    - help with adapting the application to conform to Kubernetes and security best practices;
+- handling any other support ticket outside the scope of the platform.
+
+## A5.5.3 Training
+
+Training on an as-needed basis, such as:
+
+- training the application team on effectively using the platform;
+- training the in-house on-call team.
