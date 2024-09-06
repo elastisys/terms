@@ -8,6 +8,10 @@ Mini style guide:
 - To avoid confusion, we try to only capitalize words which are defined within the ToS itself. For example, we capitalize "Sub-processor" and "Customer", but not "cluster" and "infrastructure provider". Currently, we don't define "cluster" and "infrastructure" in the ToS, since their exact definition is not critical to a commercial agreement.
 -->
 
+Last updated 2024-09-06.
+
+Previous versions of the ToS are located at
+<https://github.com/elastisys/terms/commits/main/terms-of-service.md>
 
 # Terms of Service
 
@@ -26,10 +30,6 @@ Each appendix applies to the Services specified in the title.
 
 Links to external websites are for informational purposes only and are NOT incorporated by reference in these Terms of Service.
 
-These terms are applicable starting 2024-03-01.
-Previous versions of the ToS are located at
-<https://github.com/elastisys/terms/commits/main/terms-of-service.md>
-
 [TOC]
 
 ## 1. Definitions
@@ -41,6 +41,8 @@ The following terms and expressions shall in this document, when capitalized, ha
 **AUTHORIZED USER** means Customer and Customer's employees, consultants, contractors, and agents (i) who are authorized by Customer to access and use the Services under the rights granted to Customer pursuant to the Agreement and (ii) for whom access to the Services has been purchased hereunder.
 
 **AGREEMENT** means the Order, these Terms of Service (including all appendices), any Data Processing Agreement between the Customer and Elastisys, and any additional agreements, documents or terms which incorporate these Terms of Service by reference.
+
+**AUTOSCALING** means a technical method to add or remove Nodes without human intervention either from the Customer's or Elastisys's side.
 
 **BUSINESS HOURS** means the time between 8.00am to 17.00pm in the Europe/Stockholm timezone on working days. Working days are Monday to Friday except for:
 
@@ -233,10 +235,10 @@ Elastisys makes commercially reasonable efforts to ensure that the provided Serv
     * ensure the Software Bill of Materials (SBOM) is up-to-date;
     * subscribe to security announcements issued by vendors of software components used by Elastisys;
     * setup Elastisys vulnerability disclosure channels; information on how to report a vulnerability to Elastisys can be found at <https://github.com/elastisys/compliantkubernetes-apps/blob/main/SECURITY.md>;
-    * ensure via its CNCF membership that open-source projects are sufficiently funded for good vulnerability management; evidence that Elastisys is a CNCF member can be found at <https://landscape.cncf.io/members?selected=elastisys-member>;
+    * ensure via its CNCF membership that open-source projects are sufficiently funded for good vulnerability management; evidence that Elastisys is a CNCF member can be found at <https://landscape.cncf.io/?item=cncf-members--silver--elastisys-member>;
 * **Detect**: Elastisys will detect vulnerabilities as follows:
     * monitor security announcements issued by vendors of software components used by Elastisys;
-    * monitor Elastisys vulnerability disclosure channels and timely fix reported vulnerabilities;
+    * monitor Elastisys vulnerability disclosure channels;
 * **Respond**: Elastisys will respond to vulnerabilities without undue delay by determining if a vulnerability will put Customer systems and Customer Data at risk; and if so:
     * release and apply countermeasures –  such as firewall rules or disable functionality – so  as to limit the impact of the vulnerability;
     * work with vendors to ensure timely release of security patches for software components with are part of the Service;
@@ -337,6 +339,7 @@ The Service Fee is invoiced by Elastisys after each month of usage.
 Terms of payment are thirty (30) days from the date of invoice.
 The minimum billing period for any Service instance is one month.
 Change Orders that modify the cost of a Service Instance have a billing granularity of one day.
+Nodes which are provisioned with Autoscaling have a billing granularity of one hour.
 
 The Service Fee for any agreed Professional Services shall be invoiced by Elastisys on a monthly basis in arrears.
 Terms of payment are thirty (30) days from the date of invoice.
@@ -503,7 +506,7 @@ Customer acknowledge and agree that Elastisys has the right, in its sole discret
 You will be notified of modifications through notifications or posts on Elastisys' website or direct email communication from Elastisys.
 You are responsible for reviewing and becoming familiar with any such modifications.
 Your continued use of the Services after the effective date of the modifications will be deemed acceptance of the modified terms.
-Elastisys will provide at least 30 days' advance notice of changes to any service level that Elastisys reasonably anticipates may result in a material reduction in quality or services.
+Elastisys will provide at least 90 days' advance notice of changes to any service level that Elastisys reasonably anticipates may result in a material reduction in quality or services.
 If the Customer chooses not to accept the modification, Customer has the right to terminate the Agreement within 30 days from Elastisys notification of the modification.
 
 ## 20. Governing Law and Dispute
@@ -707,14 +710,8 @@ days or 43 200 minutes).
 <thead>
 <tr>
     <th>&nbsp;</th>
-    <th colspan="2">Premium Plan***</th>
-    <th colspan="2">
-        Standard Plan
-        <br>
-        (Incident management:
-        <br>
-        6am to 22pm CET)
-    </th>
+    <th colspan="2">Premium Plan**</th>
+    <th colspan="2">Standard Plan</th>
 </tr>
 <tr>
     <th>Priority level</th>
@@ -729,15 +726,15 @@ days or 43 200 minutes).
     <td>Critical Incident</td>
     <td>60 min</td>
     <td>4 h</td>
-    <td>60 min**</td>
-    <td>4 h**</td>
+    <td>60 min<br><strong>6am to 22pm</strong></td>
+    <td>4 h<br><strong>6am to 22pm</strong></td>
 </tr>
 <tr>
     <td>Major Incident</td>
-    <td>2 h</td>
-    <td>12 h</td>
-    <td>2 h**</td>
-    <td>12 h**</td>
+    <td>2 h †</td>
+    <td>12 h †</td>
+    <td>2 h †</td>
+    <td>12 h †</td>
 </tr>
 <tr>
     <td>Minor Incident</td>
@@ -760,9 +757,7 @@ For General Questions, Elastisys will make commercially reasonable effort to ans
 
 \* Response time from a qualified engineer measured from incident start or notification by the Customer
 
-\*\* Response time and target solutions times only applies between 06am and 22pm CET for Standard plan Environments.
-
-\*\*\* Environments with the Premium Plan are required to go through a go-live checklist before any uptime service levels are enforced. The go-live checklist tests whether the application can withstand maintenance windows and disaster recovery with acceptable downtime. The go-live checklist is located at <https://elastisys.io/compliantkubernetes/user-guide/go-live/>.
+\*\* Environments with the Premium Plan are required to go through a go-live checklist before any uptime service levels are enforced. The go-live checklist tests whether the application can withstand maintenance windows and disaster recovery with acceptable downtime. The go-live checklist is located at <https://elastisys.io/compliantkubernetes/user-guide/go-live/>.
 
 † Response time and target solutions times only applies during Business Hours.
 This is needed in order to minimize unnecessary overtime and comply with the Swedish Working Hours Act (1982:673).
@@ -1348,22 +1343,80 @@ Responsibility assignment matrix; Responsible, Accountable, Consulted, Informed 
 
 \* Elastisys reserves the right to downgrade the incident's level. See [3.4 Incident Levels and Response Time](#34-incident-levels-and-response-time).
 
-# Appendix 3 Managed Additional Service Specification [Managed Services only]
+## A2.8 Pricing
+
+The Customer is charged for:
+
+- **change orders** and **incident management** on the basis of a monthly subscription;
+- **proactive security and stability improvements** on the basis of a monthly subscription;
+- **consultancy** on a time-and-material basis;
+- **training** on an as-needed basis.
+
+## A2.8.1 Change Orders and Incident Management
+
+This covers handling support tickets within the scope of the platform, such as:
+
+- creating and terminating Environments or Additional Services;
+- resizing Environments and Additional Services;
+- help with troubleshooting;
+- disaster recovery.
+
+These activities are covered by the stipulated response times.
+
+## A2.8.2 Proactive Security and Stability Improvements
+
+This covers activities such as:
+
+- applying monthly platform updates;
+- applying security patches as needed;
+- proactive monitoring to ensure platform stability and security.
+
+Premium Plan further includes:
+
+- 1 yearly go-live exercises, which includes a disaster recovery drill.
+
+The go-live checklist is located at <https://elastisys.io/compliantkubernetes/user-guide/go-live/>.
+
+## A2.8.3 Consultancy
+
+Consultancy on a T&M basis, such as:
+
+- migration assessment;
+- help with adapting the application to conform to Kubernetes and security best practices;
+- security review;
+- handling any other support ticket outside the scope of the platform.
+
+## A2.8.4 Training
+
+Training on an as-needed basis, such as:
+
+- training the application team on effectively using the platform.
+
+# <a name="appendix-3"></a>Appendix 3 Managed Additional Service Specification [Managed Services only]
 
 This Appendix applies only to Managed Services.
 
 ## A3.1 Service Specification
 
-Elastisys can manage the following additional services within an environment:
+Elastisys can manage the following Additional Services within an environment:
 
 -   Databases: PostgreSQL versions 13, 14 or 15.
 -   Low-latency in-memory caches: Ephemeral Redis version 6
 -   Message queues: RabbitMQ version 3
 -   Time-series database: TimescaleDB Community (only open-source features are included)
+-   Continuous delivery: Argo CD 2 (only namespace-level, non-admin and non-beta features are included)
 
-Documentation regarding Additional services is located at <https://elastisys.io/compliantkubernetes/user-guide/additional-services/>.
+Documentation regarding Additional Services is located at <https://elastisys.io/compliantkubernetes/user-guide/additional-services/>.
 
-All instances of Additional services are replicated across three dedicated Nodes, with the exception of Standard Plan PostgreSQL that has two replicas.
+For fault-tolerance, Additional Services are replicated as follows:
+
+- PostgreSQL Premium Plan: 3 dedicated Nodes
+- Ephemeral Redis: 3 dedicated Nodes
+- RabbitMQ: 3 dedicated Nodes
+- TimescaleDB Premium Plan: 3 dedicated Nodes
+- PostgreSQL Standard Plan: 2 dedicated Nodes
+- TimescaleDB Standard Plan: 2 dedicated Nodes
+- Argo CD: not replicated, but guaranteed to fail-over within 5 minutes
 
 ## A3.2 Retention for logs and metrics
 
@@ -1384,6 +1437,8 @@ Out-of-cluster Authorized User access is performed via OpenID and RBACs, covered
 
 For PostgreSQL and RabbitMQ, the Customer is given user access with privileges to delegate access to other Authorized Users and Customer Applications, as required. For Redis, access is controlled via NetworkPolicies only, i.e., no usernames and passwords.
 
+For Argo CD, the Customer only has self-service access to user (non-admin) features. Other features of Argo CD -- in particular those requiring admin access or cluster-wide mode -- might not be available or might only be available via service tickets. These safeguards are needed to maintain platform stability and security, in line with [A2.3 Safeguards](#a23-safeguards).
+
 ## A3.3b Application access
 
 By default, additional managed services are only accessible for applications running within the respective Kubernetes environment. Customer can request out-of-cluster access if Customer accepts the added security risks.
@@ -1394,6 +1449,7 @@ The backup scope includes:
 
 - For PostgreSQL: user definitions, data definitions, and the data per-se.
 - For RabbitMQ: user definitions, vhost definitions, topology definitions.
+- For Argo CD: resources that can be created by application developers, such as: ApplicationSets; Applications; AppProjects; Secrets and ConfigMaps as needed to store configuration on repositories and notifications.
 
 The backup does NOT include:
 
@@ -1402,11 +1458,11 @@ The backup does NOT include:
 
 Recovery Time Objective:
 
-- Recovery from Disasters are handled according to response and solution target times for Critical incidents, see Section 3.
+- Recovery from Disasters are handled according to response and solution target times for Critical incidents, see [A2.1.2 Response Time](#a212-response-time).
 
 Recovery Point Objective:
 
-- A full backup of PostgreSQL and RabbitMQ definitions is taken every day between 0:00 am and 6:00 am CET. The backup retention period is 30 days unless otherwise requested by the customer.
+- A full backup of PostgreSQL, RabbitMQ definitions and Argo CD is taken every day between 0:00 am and 6:00 am CET. The backup retention period is 30 days unless otherwise requested by the customer.
 - For PostgreSQL, point-in-time recovery is provided for the last 7 days with a recovery point objective of 5 minutes.
 - Long-term backup schemes can be enabled after discussion with the customer.
 
@@ -1426,6 +1482,8 @@ Documentation on how to perform load testing is located at <https://elastisys.io
 For PostgreSQL, major upgrades are foreseen approximately 1 times per year, as per PostgreSQL release cycle located at <https://www.postgresql.org/support/versioning/>.
 
 For RabbitMQ and Redis, major upgrades will be available depending on upstream releases and Elastisys's risk assessment on the stability and security of the new major releases.
+
+For Argo CD, minor upgrades will be available depending on upstream releases and Elastisys's risk assessment on the stability and security of those releases. Argo CD upstream Release Process and Cadence is located at <https://argo-cd.readthedocs.io/en/stable/developer-guide/release-process-and-cadence/>.
 
 Minor upgrades for Additional services are performed as specified in Section [A2.6](#a26-updates-and-upgrades).
 
@@ -1817,6 +1875,10 @@ Responsibility assignment matrix; Responsible, Accountable, Consulted, Informed 
 </tbody>
 </table>
 
+## A3.9 Pricing
+
+Pricing of Additional Services is performed as for the Compliant Kubernetes environment that hosts them. See [A2.8 Pricing](#a28-pricing).
+
 # Appendix 4 Privacy Policy for Authorized Users [All Services]
 
 This Appendix applies to both Managed Services and Self-managed Services.
@@ -1844,22 +1906,19 @@ The personal data we process includes contact information, such as IP addresses,
 
 ## A4.4 Legal Basis
 
-We process personal data of Authorized Users based on legal obligation.
+We process personal data of Authorized Users based on legitimate interest.
 
-Specifically, the most stringent requirement comes from the Swedish Patient Data Law (HSLF-FS 2016:40 4 kap. 9 §), which stipulates that we store an audit log for at least 5 years.
-We understand GDPR Art. 32 "Security of Processing" to imply that the privacy of Authorized Users needs to be balanced against the privacy of Customer Application users.
-We need to store Change Orders for complying with Swedish Accounting Laws (Bokföringslag 1999:1078).
+The [three-part Legitimate Interest Assessment (LIA)](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/legitimate-interests/how-do-we-apply-legitimate-interests-in-practice/) is as follows:
+
+- Purpose test: We need to be able to demonstrate that we properly executed Change Orders.
+- Necessity test: As an ISO 27001-certified supplier, we are expected to keep audit logs. Only personal data of Authorized Users which is relevant for the Change Orders is stored.
+- Balancing test: Only personal data of Authorized Users is processed. Art. 32 GDPR has been interpreted as requiring storing audit logs.
 
 ## A4.5 Retention
 
 By default, audit logs are stored the personal data of Authorized Users for at least 30 days.
 
-If you process patient data, then we legally need to store audit logs for at least 5 years, according to Swedish Patient Data Law (HSLF-FS 2016:40 4 kap. 9 §).
-
-Change Orders are stored for the maximum of the following:
-- as long as we have a business relationship;
-- (if you process patient data) for at least 5 years;
-- as required to comply with Swedish Accounting Laws (Bokföringslag 1999:1078).
+Change Orders are stored for as long as we have a business relationship plus 30 days.
 
 ## A4.6 Protection of personal data
 
@@ -1888,6 +1947,8 @@ Name of Subprocessor | Description of Processing | Location of Processing | Corp
 Atlassian (JIRA) | service ticket handling | Global | US | [DPA](https://www.atlassian.com/legal/data-processing-addendum)
 Google Workspace (GMail, Drive) | Email communication, storing contact information | Global | US | [DPA](https://cloud.google.com/terms/data-processing-addendum)
 Telavox AB | Phone communication, storing contact information | Sweden | Sweden | DPA is stored internally
+
+Certain audit logs, such as Kubernetes API accesses, are stored within your Environment and hence use the Subprocessor which you chose when you ordered the creation of the Environment.
 
 As of 2023-05-31, the US is a third country.
 See what this means on IMY's website:
