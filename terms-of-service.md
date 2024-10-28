@@ -8,7 +8,7 @@ Mini style guide:
 - To avoid confusion, we try to only capitalize words which are defined within the ToS itself. For example, we capitalize "Sub-processor" and "Customer", but not "cluster" and "infrastructure provider". Currently, we don't define "cluster" and "infrastructure" in the ToS, since their exact definition is not critical to a commercial agreement.
 -->
 
-Last updated 2024-09-06.
+Last updated 2024-10-28.
 
 Previous versions of the ToS are located at
 <https://github.com/elastisys/terms/commits/main/terms-of-service.md>
@@ -20,10 +20,10 @@ These Terms of Service set forth the terms between you ("**Customer**," "**you**
 The terms are valid for the following Elastisys offers:
 
 - **Managed Services**:
-    - **Standard Plan**: Compliant Kubernetes and Additional Services, Managed by Elastisys 6-22
-    - **Premium Plan**: Compliant Kubernetes and Additional Services, Managed by Elastisys 24/7
+    - **Standard Plan**: Welkin and Additional Services, Managed by Elastisys 6-22
+    - **Premium Plan**: Welkin and Additional Services, Managed by Elastisys 24/7
 - **Self-managed Services**:
-    - **Self-managed Plan**: Compliant Kubernetes and Additional Services, Managed by the Customer and Supported by Elastisys 8-17
+    - **Self-managed Plan**: Welkin and Additional Services, Managed by the Customer and Supported by Elastisys 8-17
 
 The main part of these terms (clauses 1 to 20) applies to all offers.
 Each appendix applies to the Services specified in the title.
@@ -80,7 +80,7 @@ These instructions are provided in the Order.
 **ELASTISYS IP** means the Services, the Documentation, and all intellectual property provided to Customer or any other Authorized User in connection with the foregoing.
 For the avoidance of doubt, Elastisys IP does not include Data owned by the Customer.
 
-**ENVIRONMENT** means one Compliant Kubernetes Service Instance, which might also include other Services as listed in the appendices to these Terms.
+**ENVIRONMENT** means one Welkin Service Instance, which might also include other Services as listed in the appendices to these Terms.
 
 **GDPR** means Regulation (EU) 2016/679 of the European Parliament and the Council as amended, supplemented and/or varied from time to time.
 
@@ -93,7 +93,7 @@ Intermittent issues that affect mission-critical functionality.
 The incident causes or may cause an adverse effect on the Customer's business or a critical function does not work, or work with response times that are inferior to the agreed-upon time.
 - **MINOR INCIDENT**: All other incidents.
 
-**MANAGED SERVICES** means delivery of Elastisys Compliant Kubernetes and Additional Services operated by Elastisys. The Customer does NOT have administrative access to Environments. Managed Services are offered with two Plans: Standard Plan and Premium Plan.
+**MANAGED SERVICES** means delivery of Welkin and Additional Services operated by Elastisys. The Customer does NOT have administrative access to Environments. Managed Services are offered with two Plans: Standard Plan and Premium Plan.
 
 **NODE** means a data plane (worker) Node in Kubernetes and may be either a virtual or a physical machine.
 
@@ -114,15 +114,15 @@ A Plan can either be a Standard Plan, Premium Plan or a Self-managed Plan.
 
 **PROFESSIONAL SERVICES** means separately ordered consultancy services provided by Elastisys on hourly rates and basis.
 
-**SERVICE(S)** means the Managed Service(s) or Self-managed Service(s) offered by Elastisys under the Agreement as described in the appendices to these Terms (including Elastisys Compliant Kubernetes platform for running containerized applications and additional services).
+**SERVICE(S)** means the Managed Service(s) or Self-managed Service(s) offered by Elastisys under the Agreement as described in the appendices to these Terms (including Welkin platform for running containerized applications and additional services).
 
 **SERVICE ENDPOINT(S)** means the API or UI endpoints for the Service(s) made available to the Customer.
 The Service specific appendices set forth the Services Endpoints for each provided Service.
 
 **SERVICE FEE** means the periodic fee for the Services (yearly or monthly) and the aggregated hourly fees for Professional Services, to be paid by the Customer to Elastisys.
 
-**SERVICE INSTANCE** means one instance of a particular Service under a specific Plan. Customers may Order multiple Service Instances (for example multiple Compliant Kubernetes Service Instances).
-The Plan chosen for additional Services delivered in connection with one Compliant Kubernetes Service Instance (see appendices) must be the same as the associated Compliant Kubernetes Service Instance.
+**SERVICE INSTANCE** means one instance of a particular Service under a specific Plan. Customers may Order multiple Service Instances (for example multiple Welkin Service Instances).
+The Plan chosen for additional Services delivered in connection with one Welkin Service Instance (see appendices) must be the same as the associated Welkin Service Instance.
 
 **SERVICE RECIPIENT** means a third-party company - other than the Customer - entitled to receive and use the Services.
 
@@ -133,7 +133,7 @@ Service Start Date is specified in Order and if not, it shall be the date Elasti
 
 **SUBPROCESSOR** A natural or legal person, public authority, agency or other body which, in the capacity of subcontractor to the Processor, Processes Personal Data on behalf of the Controller.
 
-**SUPPORTED SERVICES** means delivery of Elastisys Compliant Kubernetes and Additional Services operated by the Customer. The Customer has administrative access to Environments. Elastisys supports the Customer with operations. Self-managed Services are offered with one Plans: Self-managed Plan.
+**SUPPORTED SERVICES** means delivery of Welkin and Additional Services operated by the Customer. The Customer has administrative access to Environments. Elastisys supports the Customer with operations. Self-managed Services are offered with one Plans: Self-managed Plan.
 
 **TERMS** means these Terms of Service with all appendices.
 
@@ -188,11 +188,12 @@ For Self-managed Services, the Customer is responsible for uptime in consultatio
 
 ### 3.2 Ways of Contact
 
-The Customer may contact Elastisys by opening a support ticket, sending Slack messages, or calling the Elastisys' support number.
+The Customer may contact Elastisys by opening a support ticket, or calling the Elastisys' support number.
 The Customer may initiate an unlimited number of support tickets.
 A support ticket may only be submitted to Elastisys via Elastisys designated support channels as instructed from time to time by Elastisys.
 The Customer should not enter any sensitive information in a written support ticket.
 If such information needs to be provided, it should be done over the phone.
+If the customer has a shared Slack channel with Elastisys, this contact path is to be used for informal communication only.
 
 ### 3.3 Change Order(s)
 
@@ -258,9 +259,9 @@ For example, for a vulnerability found in Kubernetes, the communication between 
 2. The vendor releases a security patch and announces it via its security announcement channels.
 For example, for a vulnerability found in Kubernetes, an email is sent to the <kubernetes-security-announce@googlegroups.com> mailing list.
 3. Elastisys becomes aware of the security patch via the vendor's security announcement channels, because Elastisys is subscribed to all security announcement channels of the relevant software components.
-4. Elastisys incorporates the security patch into Compliant Kubernetes and releases a new version of Compliant Kubernetes.
-5. Elastisys informs Self-managed Service Customers via Slack and/or email that a new security patch was released for Compliant Kubernetes.
-6. The Self-managed Service Customers in collaboration with Elastisys apply the newly released version of Compliant Kubernetes.
+4. Elastisys incorporates the security patch into Welkin and releases a new version of Welkin.
+5. Elastisys informs Self-managed Service Customers via Slack and/or email that a new security patch was released for Welkin.
+6. The Self-managed Service Customers in collaboration with Elastisys apply the newly released version of Welkin.
 7. Elastisys applies the security patch for Managed Service Customers.
 
 #### Illustrative Example: Third-party security researcher reports a vulnerability to Elastisys
@@ -274,9 +275,9 @@ For example, for a vulnerability found in Kubernetes, the communication between 
 2. The vendor releases a security patch and announces it via its security announcement channels.
 For example, for a vulnerability found in Kubernetes, an email is sent to the <kubernetes-security-announce@googlegroups.com> mailing list.
 3. Elastisys becomes aware of the security patch via the vendor's security announcement channels, because Elastisys is subscribed to all security announcement channels of the relevant software components.
-4. Elastisys incorporates the security patch into Compliant Kubernetes and releases a new version of Compliant Kubernetes.
-5. Elastisys informs Self-managed Service Customers via Slack and/or email that a new security patch was released for Compliant Kubernetes.
-6. The Self-managed Service Customers in collaboration with Elastisys apply the newly released version of Compliant Kubernetes.
+4. Elastisys incorporates the security patch into Welkin and releases a new version of Welkin.
+5. Elastisys informs Self-managed Service Customers via Slack and/or email that a new security patch was released for Welkin.
+6. The Self-managed Service Customers in collaboration with Elastisys apply the newly released version of Welkin.
 7. Elastisys applies the security patch for Managed Service Customers.
 
 ## 4. Elastisys Obligations
@@ -652,24 +653,27 @@ When such an obligation arises, the Sub-processor shall promptly notify the Proc
 **A1.11.1** The Processor shall upon termination of the Agreement or this DPA instruct the Sub-processor in writing whether or not to transfer the Personal Data to the Processor (such transfer to be made in a common machine readable format).
 The Sub-processor will erase the Personal Data from its systems no earlier than 30 days and no later than 40 days after the effective date of termination of the Agreement.
 
+In certain cases, the Processor has access to self-service Service Instance deletion, e.g., by using the Delete Managed application feature in Azure portal.
+If the Customer self-service deletes a Service Instance, then the Personal Data will be erased immediately, including its backups.
+
 ## A1.12 Terms
 
 **A1.12.1** This DPA shall, notwithstanding the terms of the Agreement, enter into effect when the Sub-processor commences to process Personal Data on behalf of the Processor and shall terminate when the Sub-processor has erased the Personal Data in accordance with Section A1.11 above.
 
-# Appendix 2 Managed Compliant Kubernetes Service Specification [Managed Services only]
+# Appendix 2 Managed Welkin Service Specification [Managed Services only]
 
 This Appendix applies only to Managed Services.
 
 ## A2.1 Service specification
 
-Elastisys Compliant Kubernetes is a platform for running containerized applications and additional services -- e.g., databases, message queues, and key-value caches -- as required to comply with data protection regulations.
-Besides the ability to run containerized applications, Compliant Kubernetes comes with out-of-the-box security and observability.
+Welkin is a platform for running containerized applications and additional services -- e.g., databases, message queues, and key-value caches -- as required to comply with data protection regulations.
+Besides the ability to run containerized applications, Welkin comes with out-of-the-box security and observability.
 
-Compliant Kubernetes can be integrated with the customer's Identity Provider to facilitate compliance with Customer's access control policy.
+Welkin can be integrated with the customer's Identity Provider to facilitate compliance with Customer's access control policy.
 
-Compliant Kubernetes documentation can be found at <https://elastisys.io/compliantkubernetes/>.
+Welkin documentation can be found at <https://elastisys.io/compliantkubernetes/>.
 
-Managed Compliant Kubernetes is Compliant Kubernetes offered by Elastisys as a managed service.
+Managed Welkin is Welkin offered by Elastisys as a managed service.
 
 ## A2.1.1 Availability
 
@@ -797,14 +801,14 @@ How Elastisys conducts such an assessment is located at <https://elastisys.io/co
 IP allowlisting -- also called network-based access control -- adds an additional layer of security by only allowing access from a trusted set of IP addresses.
 Elastisys strongly recommends it as a complement to identity-based access control.
 
-As a bare minimum, the Customer should configure IP allowlisting on Compliant Kubernetes Service Endpoints, such as the Kubernetes API.
+As a bare minimum, the Customer should configure IP allowlisting on Welkin Service Endpoints, such as the Kubernetes API.
 The Customer can easily request such IP allowlisting by filing a service ticket.
 
-The Customer can configure IP allowlisting on applications hosted inside a Compliant Kubernetes environment.
+The Customer can configure IP allowlisting on applications hosted inside a Welkin environment.
 The exact steps to follow are located at <https://elastisys.io/compliantkubernetes/user-guide/network-model/>.
 
 Upon request, Elastisys can support the customer in configuring IP allowlisting for external IT systems.
-Said external IT systems run outside Compliant Kubernetes, but need to be accessed by Customer Applications running inside Compliant Kubernetes.
+Said external IT systems run outside Welkin, but need to be accessed by Customer Applications running inside Welkin.
 The implementation may include manual approaches, such as careful coordination via email, or automated approaches.
 The Customer and Elastisys jointly decide on the exact implementation, taking into account the following decision drivers:
 
@@ -821,7 +825,7 @@ The backup scope includes:
 - For Customer Kubernetes, this includes resources in Customer owned namespaces, such as Pods, Deployments, StatefulSets, DaemonSets, CronJobs, Services, Horizontal Pod Autoscalers, Pod Disruption Budgets, ConfigMaps, Secrets, NetworkPolicies, ServiceAccounts, Roles, RoleBindings, Ingresses, PersistentVolumeClaims, and any additional custom resources added upon service requests.
 - Customer Data stored on PersistentVolumes.
 - Backups are enabled by default. Customers can opt-out from all backups.
-- Customers are responsible to backup any kind of user and application data beyond what is covered by the Compliant Kubernetes resources listed above.
+- Customers are responsible to backup any kind of user and application data beyond what is covered by the Welkin resources listed above.
 
 Documentation on how the Customer can configure backups is located at
 <https://elastisys.io/compliantkubernetes/user-guide/backup/>.
@@ -873,7 +877,7 @@ Elastisys performs all maintenance according to best practices and will take all
 Customers are recommended to implement robust applications that tolerate the above maintenance, such as node replacements and Service(s) restart, e.g., as per the go live checklist, which is located at <https://elastisys.io/compliantkubernetes/user-guide/go-live/>.
 Any caused downtime during maintenance is not counted against the Service Availability, as detailed in the above section about Availability.
 
-For Compliant Kubernetes, major upgrades are foreseen approximately 3 times per year, as per Kubernetes release cycle documentation located at <https://kubernetes.io/releases/release/>.
+For Welkin, major upgrades are foreseen approximately 3 times per year, as per Kubernetes release cycle documentation located at <https://kubernetes.io/releases/release/>.
 
 ## A2.7 Change Order
 
@@ -920,7 +924,7 @@ Responsibility assignment matrix; Responsible, Accountable, Consulted, Informed 
 </thead>
 <tbody>
 <tr>
-    <td>Definition of Compliant Kubernetes Architecture</td>
+    <td>Definition of Welkin Architecture</td>
     <td></td> <!-- Customer R -->
     <td></td> <!-- Customer A -->
     <td></td> <!-- Customer C -->
@@ -931,7 +935,7 @@ Responsibility assignment matrix; Responsible, Accountable, Consulted, Informed 
     <td></td> <!-- Elastisys I -->
 </tr>
 <tr>
-    <td>Contribution of all related software components needed to run Compliant Kubernetes</td>
+    <td>Contribution of all related software components needed to run Welkin</td>
     <td></td> <!-- Customer R -->
     <td></td> <!-- Customer A -->
     <td></td> <!-- Customer C -->
@@ -942,7 +946,7 @@ Responsibility assignment matrix; Responsible, Accountable, Consulted, Informed 
     <td></td> <!-- Elastisys I -->
 </tr>
 <tr>
-    <td>Contribution of all related software licenses needed to run Compliant Kubernetes</td>
+    <td>Contribution of all related software licenses needed to run Welkin</td>
     <td></td> <!-- Customer R -->
     <td></td> <!-- Customer A -->
     <td></td> <!-- Customer C -->
@@ -954,10 +958,10 @@ Responsibility assignment matrix; Responsible, Accountable, Consulted, Informed 
 </tr>
 <tr>
     <td>
-        Installation and configuration of all related Compliant Kubernetes components:
+        Installation and configuration of all related Welkin components:
         <ul>
             <li>Setup of virtual machines and related infrastructure on the infrastructure provider</li>
-            <li>Setup of Compliant Kubernetes</li>
+            <li>Setup of Welkin</li>
             <li>Setup of related networking configuration (accessible on public Internet IP)</li>
             <li>Setup of initial user privileges</li>
         </ul>
@@ -1170,7 +1174,7 @@ Responsibility assignment matrix; Responsible, Accountable, Consulted, Informed 
     <td></td> <!-- Elastisys I -->
 </tr>
 <tr>
-    <td>Shutdown and removal of Compliant Kubernetes application elements including data and infrastructure</td>
+    <td>Shutdown and removal of Welkin application elements including data and infrastructure</td>
     <td></td> <!-- Customer R -->
     <td>X</td> <!-- Customer A -->
     <td></td> <!-- Customer C -->
@@ -1400,7 +1404,7 @@ This Appendix applies only to Managed Services.
 
 Elastisys can manage the following Additional Services within an environment:
 
--   Databases: PostgreSQL versions 13, 14 or 15.
+-   Databases: PostgreSQL versions 13, 14, 15 or 16.
 -   Low-latency in-memory caches: Ephemeral Redis version 6
 -   Message queues: RabbitMQ version 3
 -   Time-series database: TimescaleDB Community (only open-source features are included)
@@ -1427,13 +1431,13 @@ Additional services feature the following monitoring capabilities:
     Audit logs for the database (PostgreSQL), e.g., which query was executed by which user when, can be enabled upon request.
 - Metrics, e.g., synchronization latency, number of requests per second, CPU usage, memory usage, disk I/O, and network I/O.
 
-The Customers can view monitoring data through the monitoring endpoints of Compliant Kubernetes.
+The Customers can view monitoring data through the monitoring endpoints of Welkin.
 
-Retention times of additional services are the same as the Compliant Kubernetes environment that hosts them. See A1.2.
+Retention times of additional services are the same as the Welkin environment that hosts them. See A1.2.
 
 ## A3.3 Customer access
 
-Out-of-cluster Authorized User access is performed via OpenID and RBACs, covered by audit logs (included in Compliant Kubernetes). In addition, NetworkPolicies can be used to control access to Additional Services from selected microservices of the Customer Application.
+Out-of-cluster Authorized User access is performed via OpenID and RBACs, covered by audit logs (included in Welkin). In addition, NetworkPolicies can be used to control access to Additional Services from selected microservices of the Customer Application.
 
 For PostgreSQL and RabbitMQ, the Customer is given user access with privileges to delegate access to other Authorized Users and Customer Applications, as required. For Redis, access is controlled via NetworkPolicies only, i.e., no usernames and passwords.
 
@@ -1877,7 +1881,7 @@ Responsibility assignment matrix; Responsible, Accountable, Consulted, Informed 
 
 ## A3.9 Pricing
 
-Pricing of Additional Services is performed as for the Compliant Kubernetes environment that hosts them. See [A2.8 Pricing](#a28-pricing).
+Pricing of Additional Services is performed as for the Welkin environment that hosts them. See [A2.8 Pricing](#a28-pricing).
 
 # Appendix 4 Privacy Policy for Authorized Users [All Services]
 
@@ -1986,14 +1990,14 @@ This Appendix applies only to Self-managed Services.
 
 ## A5.1 Service specification
 
-Elastisys Compliant Kubernetes is a platform for running containerized applications and additional services -- e.g., databases, message queues, and key-value caches -- as required to comply with data protection regulations.
-Besides the ability to run containerized applications, Compliant Kubernetes comes with out-of-the-box security and observability.
+Welkin is a platform for running containerized applications and additional services -- e.g., databases, message queues, and key-value caches -- as required to comply with data protection regulations.
+Besides the ability to run containerized applications, Welkin comes with out-of-the-box security and observability.
 
-Compliant Kubernetes can be integrated with the customer's Identity Provider to facilitate compliance with Customer's access control policy.
+Welkin can be integrated with the customer's Identity Provider to facilitate compliance with Customer's access control policy.
 
-Compliant Kubernetes documentation can be found at <https://elastisys.io/compliantkubernetes/>.
+Welkin documentation can be found at <https://elastisys.io/compliantkubernetes/>.
 
-Self-managed Services -- such as Compliant Kubernetes and Additional Services -- are operated by the Customer with support from Elastisys. Elastisys does not have access to Customer Environments, unless otherwise agreed.
+Self-managed Services -- such as Welkin and Additional Services -- are operated by the Customer with support from Elastisys. Elastisys does not have access to Customer Environments, unless otherwise agreed.
 
 Self-managed Services give the Customer access to experienced, motivated, highly skilled, and knowledgeable technical support engineers, within the response times stipulated below.
 
@@ -2059,9 +2063,9 @@ This is needed in order to minimize unnecessary overtime and comply with the Swe
 ## A5.3 As a whole, for the intended use-case
 
 We optimized our product management, architecture design, development and quality assurance processes for the intended use-case of running a secure platform for containerized applications.
-Therefore, we can only provide support for Compliant Kubernetes as a whole for said use-case.
+Therefore, we can only provide support for Welkin as a whole for said use-case.
 
-We are aware that it is technically possible to split Compliant Kubernetes and use some of its components in isolation.
+We are aware that it is technically possible to split Welkin and use some of its components in isolation.
 We are also aware that some or all of said components can be used for other use-cases.
 However, such use has unknown consequences and is untested by Elastisys.
 Therefore, such use is not within the scope of the Self-managed Plan.
@@ -2095,7 +2099,7 @@ Note that, the Customer is overall responsible to ensure Customer Data confident
 </thead>
 <tbody>
 <tr>
-    <td>Definition of Compliant Kubernetes Architecture</td>
+    <td>Definition of Welkin Architecture</td>
     <td></td> <!-- Customer R -->
     <td></td> <!-- Customer A -->
     <td></td> <!-- Customer C -->
@@ -2106,7 +2110,7 @@ Note that, the Customer is overall responsible to ensure Customer Data confident
     <td></td> <!-- Elastisys I -->
 </tr>
 <tr>
-    <td>Releasing Compliant Kubernetes security patches</td>
+    <td>Releasing Welkin security patches</td>
     <td></td> <!-- Customer R -->
     <td></td> <!-- Customer A -->
     <td></td> <!-- Customer C -->
@@ -2166,7 +2170,7 @@ Note that, the Customer is overall responsible to ensure Customer Data confident
 </tbody>
 </table>
 
-\* Elastisys is a Kubernetes Training Partner and can provide experienced consultants integrated with the Customer's application team. This enables the application team and their application to use the Compliant Kubernetes platform in the best possible way. More information can be found at <https://elastisys.com/training/>.
+\* Elastisys is a Kubernetes Training Partner and can provide experienced consultants integrated with the Customer's application team. This enables the application team and their application to use the Welkin platform in the best possible way. More information can be found at <https://elastisys.com/training/>.
 
 ### Platform Operations
 
@@ -2202,7 +2206,7 @@ Note that, the Customer is overall responsible to ensure Customer Data confident
     <td></td> <!-- Elastisys I -->
 </tr>
 <tr>
-    <td>Installing Compliant Kubernetes</td>
+    <td>Installing Welkin</td>
     <td>X</td> <!-- Customer R -->
     <td>X</td> <!-- Customer A -->
     <td></td> <!-- Customer C -->
@@ -2213,7 +2217,7 @@ Note that, the Customer is overall responsible to ensure Customer Data confident
     <td></td> <!-- Elastisys I -->
 </tr>
 <tr>
-    <td>Configuring Compliant Kubernetes</td>
+    <td>Configuring Welkin</td>
     <td>X</td> <!-- Customer R -->
     <td>X</td> <!-- Customer A -->
     <td></td> <!-- Customer C -->
@@ -2224,7 +2228,7 @@ Note that, the Customer is overall responsible to ensure Customer Data confident
     <td></td> <!-- Elastisys I -->
 </tr>
 <tr>
-    <td>Monitoring uptime of Compliant Kubernetes endpoints</td>
+    <td>Monitoring uptime of Welkin endpoints</td>
     <td>X</td> <!-- Customer R -->
     <td>X</td> <!-- Customer A -->
     <td></td> <!-- Customer C -->
@@ -2235,7 +2239,7 @@ Note that, the Customer is overall responsible to ensure Customer Data confident
     <td></td> <!-- Elastisys I -->
 </tr>
 <tr>
-    <td>Troubleshooting Compliant Kubernetes</td>
+    <td>Troubleshooting Welkin</td>
     <td>X</td> <!-- Customer R -->
     <td>X</td> <!-- Customer A -->
     <td></td> <!-- Customer C -->
@@ -2292,7 +2296,7 @@ Note that, the Customer is overall responsible to ensure Customer Data confident
 </tbody>
 </table>
 
-\* With a basis in the Compliant Kubernetes public documentation located at <https://elastisys.io/compliantkubernetes/operator-manual/>, Elastisys supports the customer in finding, understanding and also performing the necessary steps to achieve platform-related administration.
+\* With a basis in the Welkin public documentation located at <https://elastisys.io/compliantkubernetes/operator-manual/>, Elastisys supports the customer in finding, understanding and also performing the necessary steps to achieve platform-related administration.
 
 ### Incident management
 
