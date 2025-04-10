@@ -8,7 +8,7 @@ Mini style guide:
 - To avoid confusion, we try to only capitalize words which are defined within the ToS itself. For example, we capitalize "Sub-processor" and "Customer", but not "cluster" and "infrastructure provider". Currently, we don't define "cluster" and "infrastructure" in the ToS, since their exact definition is not critical to a commercial agreement.
 -->
 
-Last updated 2024-10-28.
+Last updated 2025-04-10.
 
 Previous versions of the ToS are located at
 <https://github.com/elastisys/terms/commits/main/terms-of-service.md>
@@ -22,8 +22,8 @@ The terms are valid for the following Elastisys offers:
 - **Managed Services**:
     - **Standard Plan**: Welkin and Additional Services, Managed by Elastisys 6-22
     - **Premium Plan**: Welkin and Additional Services, Managed by Elastisys 24/7
-- **Self-managed Services**:
-    - **Self-managed Plan**: Welkin and Additional Services, Managed by the Customer and Supported by Elastisys 8-17
+- **Enterprise Services**:
+    - **Enterprise Plan**: Welkin and Additional Services, Managed by the Customer and Supported by Elastisys 8-17
 
 The main part of these terms (clauses 1 to 20) applies to all offers.
 Each appendix applies to the Services specified in the title.
@@ -106,7 +106,7 @@ The incident causes or may cause an adverse effect on the Customer's business or
 **PERSONAL DATA BREACH** means breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorized disclosure of, or access to, Personal Data transmitted, stored, or otherwise Processed.
 
 **PLAN** means the combined uptime and support undertaking provided by Elastisys for one or more Environments as reflected in the Order.
-A Plan can either be a Standard Plan, Premium Plan or a Self-managed Plan.
+A Plan can either be a Standard Plan, Premium Plan or an Enterprise Plan.
 
 **PREVIEW FEATURE** is a feature which is explicitly sold and marketed as "preview".
 
@@ -114,7 +114,7 @@ A Plan can either be a Standard Plan, Premium Plan or a Self-managed Plan.
 
 **PROFESSIONAL SERVICES** means separately ordered consultancy services provided by Elastisys on hourly rates and basis.
 
-**SERVICE(S)** means the Managed Service(s) or Self-managed Service(s) offered by Elastisys under the Agreement as described in the appendices to these Terms (including Welkin platform for running containerized applications and additional services).
+**SERVICE(S)** means the Managed Service(s) or Enterprise Service(s) offered by Elastisys under the Agreement as described in the appendices to these Terms (including Welkin platform for running containerized applications and additional services).
 
 **SERVICE ENDPOINT(S)** means the API or UI endpoints for the Service(s) made available to the Customer.
 The Service specific appendices set forth the Services Endpoints for each provided Service.
@@ -133,7 +133,7 @@ Service Start Date is specified in Order and if not, it shall be the date Elasti
 
 **SUBPROCESSOR** A natural or legal person, public authority, agency or other body which, in the capacity of subcontractor to the Processor, Processes Personal Data on behalf of the Controller.
 
-**SUPPORTED SERVICES** means delivery of Welkin and Additional Services operated by the Customer. The Customer has administrative access to Environments. Elastisys supports the Customer with operations. Self-managed Services are offered with one Plans: Self-managed Plan.
+**SUPPORTED SERVICES** means delivery of Welkin and Additional Services operated by the Customer. The Customer has administrative access to Environments. Elastisys supports the Customer with operations. Enterprise Services are offered with one Plans: Enterprise Plan.
 
 **TERMS** means these Terms of Service with all appendices.
 
@@ -184,7 +184,7 @@ Elastisys will have no liability for any damage, liabilities, losses (including 
 
 For Managed Services, Elastisys is responsible for uptime (see [A2.1.1 Availability](#a211-availability)).
 
-For Self-managed Services, the Customer is responsible for uptime in consultation with Elastisys (see [A5.4 Division of responsibility](#a54-division-of-responsibility)).
+For Enterprise Services, the Customer is responsible for uptime in consultation with Elastisys (see [A5.4 Division of responsibility](#a54-division-of-responsibility)).
 
 ### 3.2 Ways of Contact
 
@@ -218,13 +218,13 @@ This is needed in order to minimize unnecessary overtime and comply with the Swe
 
 For Managed Services, Elastisys responds as stipulated in [A2.1.2 Response Time](#a212-response-time).
 
-For Self-managed Services, Elastisys responds as stipulated in [A5.2 Response Time](#a52-response-time).
+For Enterprise Services, Elastisys responds as stipulated in [A5.2 Response Time](#a52-response-time).
 
 ### 3.5 Updates and Upgrades
 
 For all offers, Elastisys is responsible for producing Service updates and upgrades.
 For Managed Services, Elastisys is responsible for applying updates and upgrades (see [A2.6 Updates and Upgrades](#a26-updates-and-upgrades)).
-For Self-managed Services, the Customer is responsible for applying updates and upgrades in consultation with Elastisys (see [A5.4 Division of responsibility](#a54-division-of-responsibility)).
+For Enterprise Services, the Customer is responsible for applying updates and upgrades in consultation with Elastisys (see [A5.4 Division of responsibility](#a54-division-of-responsibility)).
 
 ### 3.6 Vulnerability Management
 
@@ -245,7 +245,7 @@ Elastisys makes commercially reasonable efforts to ensure that the provided Serv
     * work with vendors to ensure timely release of security patches for software components with are part of the Service;
     * release security patches for software included in the Services;
     * for Managed Services apply security patches for the software included in the Services;
-    * for Self-managed Service inform the customer and help them apply security patches for software included in the Services;
+    * for Enterprise Service inform the customer and help them apply security patches for software included in the Services;
 * **Recover**: Elastisys will recover from vulnerabilities as follows:
     * identify opportunities to reduce the likelihood or impact of future vulnerabilities
 
@@ -260,8 +260,8 @@ For example, for a vulnerability found in Kubernetes, the communication between 
 For example, for a vulnerability found in Kubernetes, an email is sent to the <kubernetes-security-announce@googlegroups.com> mailing list.
 3. Elastisys becomes aware of the security patch via the vendor's security announcement channels, because Elastisys is subscribed to all security announcement channels of the relevant software components.
 4. Elastisys incorporates the security patch into Welkin and releases a new version of Welkin.
-5. Elastisys informs Self-managed Service Customers via Slack and/or email that a new security patch was released for Welkin.
-6. The Self-managed Service Customers in collaboration with Elastisys apply the newly released version of Welkin.
+5. Elastisys informs Enterprise Service Customers via Slack and/or email that a new security patch was released for Welkin.
+6. The Enterprise Service Customers in collaboration with Elastisys apply the newly released version of Welkin.
 7. Elastisys applies the security patch for Managed Service Customers.
 
 #### Illustrative Example: Third-party security researcher reports a vulnerability to Elastisys
@@ -276,8 +276,8 @@ For example, for a vulnerability found in Kubernetes, the communication between 
 For example, for a vulnerability found in Kubernetes, an email is sent to the <kubernetes-security-announce@googlegroups.com> mailing list.
 3. Elastisys becomes aware of the security patch via the vendor's security announcement channels, because Elastisys is subscribed to all security announcement channels of the relevant software components.
 4. Elastisys incorporates the security patch into Welkin and releases a new version of Welkin.
-5. Elastisys informs Self-managed Service Customers via Slack and/or email that a new security patch was released for Welkin.
-6. The Self-managed Service Customers in collaboration with Elastisys apply the newly released version of Welkin.
+5. Elastisys informs Enterprise Service Customers via Slack and/or email that a new security patch was released for Welkin.
+6. The Enterprise Service Customers in collaboration with Elastisys apply the newly released version of Welkin.
 7. Elastisys applies the security patch for Managed Service Customers.
 
 ## 4. Elastisys Obligations
@@ -307,6 +307,18 @@ The Customer shall, upon request, grant access to and provide Elastisys with inf
 The Customer shall not interfere with or disrupt the security, stability, or performance of the Service.
 
 The Customer allows Elastisys to use the Customer's logo on Elastisys' website for marketing purposes, unless agreed otherwise.
+
+### 5.3 Deployment on Azure Marketplace
+
+If the Service is deployed on Azure Marketplace, the Customer acknowledges that they may make certain modifications at the Azure subscription level.
+These modifications could impact the stability and security of the Service and are outside the control of Elastisys.
+This includes, but is not limited to, the Customer enabling Microsoft Defender for Endpoint, which may introduce additional security scanning processes that could potentially impact the performance of the Service.
+
+The Customer agrees to:
+
+- take reasonable measures to avoid interference with the proper functioning of the Service;
+- promptly inform Elastisys of any modifications at the subscription level which may affect Elastisys's ability to deliver the Service;
+- not hold Elastisys responsible for any degradation of performance, security, or other adverse effects resulting from such modifications.
 
 ## 6. Service Fees and Terms of Payment
 
@@ -349,7 +361,7 @@ Premium Plan Environments will be billed according to Premium Plan Service Fees 
 However, Premium Plan Service Availability and any associated penalties will be enforced only after the Customer together with Elastisys have successfully completed a go-live checklist.
 The go-live checklist tests that the application can withstand maintenance windows and disaster recovery with acceptable downtime.
 
-The go-live checklist is located at <https://elastisys.io/compliantkubernetes/user-guide/go-live/>.
+The go-live checklist is located at <https://elastisys.io/welkin/user-guide/go-live/>.
 Elastisys reserves the right to continuously, and without notice, update the go-live checklist.
 
 ## 7. Term and Termination
@@ -524,7 +536,7 @@ In such case, the language of the proceeding shall be Swedish.
 
 # Appendix 1 Data Processing Agreement [All Services]
 
-This Appendix applies to both Managed Services and Self-managed Services.
+This Appendix applies to both Managed Services and Enterprise Services.
 
 This Data Processing Agreement (the "DPA") between the Customer (below, the "**Processor**") and **Elastisys AB** (below, the **"Sub-processor**") constitutes a part of the Agreement, under which the Sub-processor will process personal data on behalf of the Processor when supplying the Service (including any Professional Services).
 
@@ -671,7 +683,7 @@ Besides the ability to run containerized applications, Welkin comes with out-of-
 
 Welkin can be integrated with the customer's Identity Provider to facilitate compliance with Customer's access control policy.
 
-Welkin documentation can be found at <https://elastisys.io/compliantkubernetes/>.
+Welkin documentation can be found at <https://elastisys.io/welkin/>.
 
 Managed Welkin is Welkin offered by Elastisys as a managed service.
 
@@ -761,7 +773,7 @@ For General Questions, Elastisys will make commercially reasonable effort to ans
 
 \* Response time from a qualified engineer measured from incident start or notification by the Customer
 
-\*\* Environments with the Premium Plan are required to go through a go-live checklist before any uptime service levels are enforced. The go-live checklist tests whether the application can withstand maintenance windows and disaster recovery with acceptable downtime. The go-live checklist is located at <https://elastisys.io/compliantkubernetes/user-guide/go-live/>.
+\*\* Environments with the Premium Plan are required to go through a go-live checklist before any uptime service levels are enforced. The go-live checklist tests whether the application can withstand maintenance windows and disaster recovery with acceptable downtime. The go-live checklist is located at <https://elastisys.io/welkin/user-guide/go-live/>.
 
 † Response time and target solutions times only applies during Business Hours.
 This is needed in order to minimize unnecessary overtime and comply with the Swedish Working Hours Act (1982:673).
@@ -780,10 +792,10 @@ Upon request, Elastisys can help the Customer set up long-term cold storage for 
 
 Documentation regarding application logs, audit logs, metrics, as well as long-term retention can be found at:
 
-- <https://elastisys.io/compliantkubernetes/user-guide/logs/>
-- <https://elastisys.io/compliantkubernetes/ciso-guide/audit-logs/>
-- <https://elastisys.io/compliantkubernetes/user-guide/metrics/>
-- <https://elastisys.io/compliantkubernetes/user-guide/long-term-log-retention/>
+- <https://elastisys.io/welkin/user-guide/logs/>
+- <https://elastisys.io/welkin/ciso-guide/audit-logs/>
+- <https://elastisys.io/welkin/user-guide/metrics/>
+- <https://elastisys.io/welkin/user-guide/long-term-log-retention/>
 
 ## A2.3 Safeguards
 
@@ -791,10 +803,10 @@ Elastisys reserves the right to enforce reasonable and proportionate safeguards 
 These Safeguards are important to enforce in order to stay true to our Data Processing Agreement (DPA) and to keep our customers' data safe.
 In particular, the Customer does not receive elevated privileges, such as access to underlying VMs, running containers as root, and cluster-admin Kubernetes permissions.
 
-The list of safeguards is located at <https://elastisys.io/compliantkubernetes/user-guide/safeguards/>.
+The list of safeguards is located at <https://elastisys.io/welkin/user-guide/safeguards/>.
 
 Should the Customer require more permissions, this will be granted only after Elastisys determined that such a request does not pose a risk to the security and stability of the platform.
-How Elastisys conducts such an assessment is located at <https://elastisys.io/compliantkubernetes/user-guide/demarcation/>.
+How Elastisys conducts such an assessment is located at <https://elastisys.io/welkin/user-guide/demarcation/>.
 
 ## A2.3.1 IP Allowlisting
 
@@ -805,7 +817,7 @@ As a bare minimum, the Customer should configure IP allowlisting on Welkin Servi
 The Customer can easily request such IP allowlisting by filing a service ticket.
 
 The Customer can configure IP allowlisting on applications hosted inside a Welkin environment.
-The exact steps to follow are located at <https://elastisys.io/compliantkubernetes/user-guide/network-model/>.
+The exact steps to follow are located at <https://elastisys.io/welkin/user-guide/network-model/>.
 
 Upon request, Elastisys can support the customer in configuring IP allowlisting for external IT systems.
 Said external IT systems run outside Welkin, but need to be accessed by Customer Applications running inside Welkin.
@@ -828,7 +840,7 @@ The backup scope includes:
 - Customers are responsible to backup any kind of user and application data beyond what is covered by the Welkin resources listed above.
 
 Documentation on how the Customer can configure backups is located at
-<https://elastisys.io/compliantkubernetes/user-guide/backup/>.
+<https://elastisys.io/welkin/user-guide/backup/>.
 
 **Recovery Time Objective:**
 
@@ -842,14 +854,14 @@ Some Customer Applications may need manual intervention after a recovery in orde
 - Long-term backup schemes can be enabled after discussion with the customer.
 
 Documentation on how Elastisys protects backups is located at
-<https://elastisys.io/compliantkubernetes/user-guide/backup/#protection-of-backups>.
+<https://elastisys.io/welkin/user-guide/backup/#protection-of-backups>.
 
 ## A2.5 Resizing of platform infrastructure
 
 For robustness and availability, Elastisys reserves the right to increase the infrastructure footprint of the Environment in case the capacity limit has been exceeded.
 Elastisys will leave headroom as required to ensure a healthy working environment for our on-call engineers, but without causing waste.
 
-More details about how Elastisys performs Capacity Management is located at <https://elastisys.io/compliantkubernetes/operator-manual/capacity-management/>.
+More details about how Elastisys performs Capacity Management is located at <https://elastisys.io/welkin/operator-manual/capacity-management/>.
 
 ## A2.6 Updates and upgrades
 
@@ -874,7 +886,7 @@ If the Customer has multiple Environments, and one or more have been designated 
 Should the Customer want to test upgrades in an additional environment, Elastisys can, subject to a Change Order, create a new Service Instance with the next major version.
 
 Elastisys performs all maintenance according to best practices and will take all commercially reasonable efforts to avoid downtime for Customers during maintenance.
-Customers are recommended to implement robust applications that tolerate the above maintenance, such as node replacements and Service(s) restart, e.g., as per the go live checklist, which is located at <https://elastisys.io/compliantkubernetes/user-guide/go-live/>.
+Customers are recommended to implement robust applications that tolerate the above maintenance, such as node replacements and Service(s) restart, e.g., as per the go live checklist, which is located at <https://elastisys.io/welkin/user-guide/go-live/>.
 Any caused downtime during maintenance is not counted against the Service Availability, as detailed in the above section about Availability.
 
 For Welkin, major upgrades are foreseen approximately 3 times per year, as per Kubernetes release cycle documentation located at <https://kubernetes.io/releases/release/>.
@@ -1379,7 +1391,7 @@ Premium Plan further includes:
 
 - 1 yearly go-live exercises, which includes a disaster recovery drill.
 
-The go-live checklist is located at <https://elastisys.io/compliantkubernetes/user-guide/go-live/>.
+The go-live checklist is located at <https://elastisys.io/welkin/user-guide/go-live/>.
 
 ## A2.8.3 Consultancy
 
@@ -1410,7 +1422,7 @@ Elastisys can manage the following Additional Services within an environment:
 -   Time-series database: TimescaleDB Community (only open-source features are included)
 -   Continuous delivery: Argo CD 2 (only namespace-level, non-admin and non-beta features are included)
 
-Documentation regarding Additional Services is located at <https://elastisys.io/compliantkubernetes/user-guide/additional-services/>.
+Documentation regarding Additional Services is located at <https://elastisys.io/welkin/user-guide/additional-services/>.
 
 For fault-tolerance, Additional Services are replicated as follows:
 
@@ -1470,7 +1482,7 @@ Recovery Point Objective:
 - For PostgreSQL, point-in-time recovery is provided for the last 7 days with a recovery point objective of 5 minutes.
 - Long-term backup schemes can be enabled after discussion with the customer.
 
-Documentation on how Elastisys protects backups is located at <https://elastisys.io/compliantkubernetes/user-guide/backup/#protection-of-backups>.
+Documentation on how Elastisys protects backups is located at <https://elastisys.io/welkin/user-guide/backup/#protection-of-backups>.
 
 ## A3.5 Capacity Management
 
@@ -1479,7 +1491,7 @@ The Customer is responsible for ensuring that the Size of the additional Service
 The Size of the additional Service needs to take into account overhead due to various data protection-related platform components, e.g., intrusion detection, log collection, and metrics collection.
 
 Load testing is recommended for Standard Plan Environments and is mandatory for Premium Plan Environments to ensure additional Services are properly sized.
-Documentation on how to perform load testing is located at <https://elastisys.io/compliantkubernetes/user-guide/go-live/>.
+Documentation on how to perform load testing is located at <https://elastisys.io/welkin/user-guide/go-live/>.
 
 ## A3.6 Updates and upgrades
 
@@ -1885,7 +1897,7 @@ Pricing of Additional Services is performed as for the Welkin environment that h
 
 # Appendix 4 Privacy Policy for Authorized Users [All Services]
 
-This Appendix applies to both Managed Services and Self-managed Services.
+This Appendix applies to both Managed Services and Enterprise Services.
 
 ## A4.1 Introduction
 
@@ -1984,9 +1996,9 @@ IP addresses are only processed as much as technically required.
 We do not retain personal data in Yopass.
 We advise customers to access Yopass from their corporate network, so their IP addresses do not constitute personal data.
 
-# Appendix 5 Self-managed Service Specification [Self-managed Services only]
+# Appendix 5 Enterprise Service Specification [Enterprise Services only]
 
-This Appendix applies only to Self-managed Services.
+This Appendix applies only to Enterprise Services.
 
 ## A5.1 Service specification
 
@@ -1995,11 +2007,11 @@ Besides the ability to run containerized applications, Welkin comes with out-of-
 
 Welkin can be integrated with the customer's Identity Provider to facilitate compliance with Customer's access control policy.
 
-Welkin documentation can be found at <https://elastisys.io/compliantkubernetes/>.
+Welkin documentation can be found at <https://elastisys.io/welkin/>.
 
-Self-managed Services -- such as Welkin and Additional Services -- are operated by the Customer with support from Elastisys. Elastisys does not have access to Customer Environments, unless otherwise agreed.
+Enterprise Services -- such as Welkin and Additional Services -- are operated by the Customer with support from Elastisys. Elastisys does not have access to Customer Environments, unless otherwise agreed.
 
-Self-managed Services give the Customer access to experienced, motivated, highly skilled, and knowledgeable technical support engineers, within the response times stipulated below.
+Enterprise Services give the Customer access to experienced, motivated, highly skilled, and knowledgeable technical support engineers, within the response times stipulated below.
 
 The Customer benefits with peace of mind and cost savings by:
 
@@ -2018,7 +2030,7 @@ Elastisys virtually extends the Customer's on-call team with second-line operati
 <tr>
     <th>&nbsp;</th>
     <th colspan="2">
-        Self-managed Plan
+        Enterprise Plan
         <br>
         (8am to 17pm CET)
     </th>
@@ -2068,7 +2080,7 @@ Therefore, we can only provide support for Welkin as a whole for said use-case.
 We are aware that it is technically possible to split Welkin and use some of its components in isolation.
 We are also aware that some or all of said components can be used for other use-cases.
 However, such use has unknown consequences and is untested by Elastisys.
-Therefore, such use is not within the scope of the Self-managed Plan.
+Therefore, such use is not within the scope of the Enterprise Plan.
 
 ## A5.4 Division of responsibility
 
@@ -2296,7 +2308,7 @@ Note that, the Customer is overall responsible to ensure Customer Data confident
 </tbody>
 </table>
 
-\* With a basis in the Welkin public documentation located at <https://elastisys.io/compliantkubernetes/operator-manual/>, Elastisys supports the customer in finding, understanding and also performing the necessary steps to achieve platform-related administration.
+\* With a basis in the Welkin public documentation located at <https://elastisys.io/welkin/operator-manual/>, Elastisys supports the customer in finding, understanding and also performing the necessary steps to achieve platform-related administration.
 
 ### Incident management
 
